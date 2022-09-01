@@ -1,0 +1,60 @@
+{
+  "name": "iotaware",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.5.0",
+    "@emotion/styled": "^11.3.0",
+    "@mui/icons-material": "^5.1.0",
+    "@mui/material": "^5.1.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "axios": "^0.24.0",
+    "bpmn-font": "^0.8.0",
+    "bpmn-js": "^3.0.4",
+    "bpmn-js-properties-panel": "^0.28.2",
+    "camunda-bpmn-moddle": "^3.1.1",
+    "camunda-dmn-moddle": "^1.1.0",
+    "d3": "^7.3.0",
+    "diagram-js": "^3.0.1",
+    "diagram-js-minimap": "^1.3.0",
+    "file-saver": "^2.0.5",
+    "ityped": "^1.0.3",
+    "jquery": "^3.6.0",
+    "node-sass": "^5.0.0",
+    "python": "^0.0.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-external-link": "^1.2.2",
+    "react-reveal": "^1.2.2",
+    "react-router-dom": "^6.2.1",
+    "react-scripts": "4.0.3",
+    "save": "^2.4.0",
+    "tiny-svg": "^2.2.2",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

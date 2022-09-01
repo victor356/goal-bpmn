@@ -1,0 +1,187 @@
+@import "../../global.scss";
+
+.cockpit{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1{
+        font-size: 50px;
+
+        @include mobile{
+            font-size: 20px;
+        }
+    }
+
+    .container{
+        // border: 1px solid black;
+        width: 100%;
+        height: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        background-color: rgb(248, 238, 239);
+        margin: 50px;
+
+        @include mobile{
+            width: 100%;
+        }
+
+        .item1 {
+            width: 95%;
+            height: 50%;
+            background-color: white;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            border: 2px solid rgb(235, 235, 235);
+
+            .titolo {
+                border-bottom: 2px solid #ddd;
+                width: 95%;
+                height: 45px;
+                display: flex;
+                align-items: center;
+                margin-top: 10px;
+            }
+
+            .content{
+                // border: 1px solid #ddd;
+                flex: 1;
+                width: 95%;
+                margin: 10px;
+                display: flex;
+                flex-direction: row;
+
+                .item{
+                    // border: 1px solid #000;
+                    color: white;
+                    display: flex;
+                    flex: 1;
+                    height: 100%;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+
+                    .circle{
+                        // border: 1px solid #000;
+                        border-radius: 50%;
+                        height: 80%;
+                        width: 80%;
+                        // padding: 10% 5%;
+
+                        background-color: crimson;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+
+                        text-decoration: none;
+                        color: #fff;
+
+                        .circleButton{
+                            // border: 1px solid #000;
+                            border-radius: 50%;
+                            height: 100%;
+                            width: 100%;
+                            // padding: 10% 5%;
+    
+                            background-color: crimson;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+    
+                            text-decoration: none;
+                            color: #fff;
+
+                            &:hover{
+                                background-color: $mainColor;
+                                h4{
+                                    color: #fff;
+                                }
+                                h1{
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .item2 {
+            width: 95%;
+            height: 30%;
+            background-color: white;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            border: 2px solid rgb(235, 235, 235);
+
+            .titolo {
+                border-bottom: 2px solid #ddd;
+                width: 95%;
+                height: 45px;
+                display: flex;
+                align-items: center;
+                margin-top: 10px;
+            }
+
+            .content{
+                // border: 1px solid #ddd;
+                flex: 1;
+                width: 95%;
+                margin: 10px;
+                display: flex;
+                flex-direction: row;
+
+                .item{
+                    display: flex;
+                    flex: 1;
+                    width: 100%;
+                    // border: 1px solid #000;
+                    height: 100%;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+
+                    text-decoration: none;
+                    color: black;
+
+                    .itemButton{
+                        display: flex;
+                        flex: 1;
+                        width: 100%;
+                        border: 2px solid rgb(235, 235, 235);
+                        height: 100%;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+    
+                        text-decoration: none;
+                        color: black;
+                        border-radius: 20px;
+
+                        &:hover{
+                            background-color: crimson;
+                            border-color: crimson;
+                            h4{
+                                color: #fff;
+                            }
+                            h1{
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
