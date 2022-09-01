@@ -1,0 +1,1498 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#"
+     xml:base="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:SEON="dev.nemo.inf.ufes.br/seon/SEON.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:SEON1="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#dev.nemo.inf.ufes.br/seon/SEON.owl#">
+    <owl:Ontology rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#ontology -->
+
+    <owl:AnnotationProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#ontology"/>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#stereotype -->
+
+    <owl:AnnotationProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#stereotype"/>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#dev.nemo.inf.ufes.br/seon/SEON.owl#ontology -->
+
+    <owl:AnnotationProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#dev.nemo.inf.ufes.br/seon/SEON.owl#ontology"/>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#dev.nemo.inf.ufes.br/seon/SEON.owl#stereotype -->
+
+    <owl:AnnotationProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#dev.nemo.inf.ufes.br/seon/SEON.owl#stereotype"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#isLocatedAt -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#isLocatedAt">
+        <rdfs:domain rdf:resource="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#Device"/>
+        <rdfs:range rdf:resource="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#Location"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#isRealizedBy -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#isRealizedBy">
+        <owl:inverseOf rdf:resource="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#realizes"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#Goal"/>
+        <rdfs:range rdf:resource="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#Device"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#realizes -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#realizes">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#.Requirement+Requirement -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#.Requirement+Requirement">
+        <rdfs:domain rdf:resource="GORO::Requirement"/>
+        <rdfs:range rdf:resource="GORO::Requirement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#_got_from.Assumption+Requirements_Stakeholder -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#_got_from.Assumption+Requirements_Stakeholder">
+        <rdfs:range rdf:resource="RSRO::Requirements_Stakeholder"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#_got_from.Requirement+Requirements_Stakeholder -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#_got_from.Requirement+Requirements_Stakeholder">
+        <rdfs:domain rdf:resource="RSRO::Requirement"/>
+        <rdfs:range rdf:resource="RSRO::Requirements_Stakeholder"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#acts_as.Stakeholder_Participation+Organizational_Role -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#acts_as.Stakeholder_Participation+Organizational_Role">
+        <rdfs:domain rdf:resource="SPO::Stakeholder_Participation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#allocates.Stakeholder_Allocation+Stakeholder -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#allocates.Stakeholder_Allocation+Stakeholder">
+        <rdfs:domain rdf:resource="SPO::Stakeholder_Allocation"/>
+        <rdfs:range rdf:resource="SPO::Stakeholder"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#charge_of.Stakeholder_Main_Participation+Stakeholder -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#charge_of.Stakeholder_Main_Participation+Stakeholder">
+        <rdfs:range rdf:resource="SPO::Stakeholder"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#composed_of.Complex_Task+Task -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#composed_of.Complex_Task+Task">
+        <rdfs:domain rdf:resource="GORO::Complex_Task"/>
+        <rdfs:range rdf:resource="GORO::Task"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#composed_of.Performed_Activity+Hardware_Resource_Participation -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#composed_of.Performed_Activity+Hardware_Resource_Participation">
+        <rdfs:range rdf:resource="SPO::Hardware_Resource_Participation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#composed_of.Performed_Activity+Stakeholder_Participation -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#composed_of.Performed_Activity+Stakeholder_Participation">
+        <rdfs:range rdf:resource="SPO::Stakeholder_Participation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#composed_of.Testing_Environment+Test_Hardware_Resource -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#composed_of.Testing_Environment+Test_Hardware_Resource">
+        <rdfs:range rdf:resource="ROoST::Test_Hardware_Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#describes.Program_Specification+Software_Function_Universal -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#describes.Program_Specification+Software_Function_Universal">
+        <rdfs:range rdf:resource="RSRO::Software_Function_Universal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#describes.Requirement_Artifact+Requirement -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#describes.Requirement_Artifact+Requirement">
+        <rdfs:range rdf:resource="RSRO::Requirement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#establishes.Software_Organization+Operational_Definition_of_Measure -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#establishes.Software_Organization+Operational_Definition_of_Measure">
+        <rdfs:domain rdf:resource="SPO::Software_Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#implements.Program+Software_Function_Universal -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#implements.Program+Software_Function_Universal">
+        <rdfs:range rdf:resource="RSRO::Software_Function_Universal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#in_charge_of.Measurement_Analyst+Software_Measurement_Analysis -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#in_charge_of.Measurement_Analyst+Software_Measurement_Analysis">
+        <rdfs:domain rdf:resource="RSMO::Measurement_Analyst"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#in_charge_of.Measurement_Executor+Software_Measurement_Execution -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#in_charge_of.Measurement_Executor+Software_Measurement_Execution">
+        <rdfs:domain rdf:resource="RSMO::Measurement_Executor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#in_charge_of.Measurement_Manager+Software_Measurement_Planning -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#in_charge_of.Measurement_Manager+Software_Measurement_Planning">
+        <rdfs:domain rdf:resource="RSMO::Measurement_Manager"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#inheres_in.Stakeholder_Belief+Requirements_Stakeholder -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#inheres_in.Stakeholder_Belief+Requirements_Stakeholder">
+        <rdfs:domain rdf:resource="RSRO::Stakeholder_Belief"/>
+        <rdfs:range rdf:resource="RSRO::Requirements_Stakeholder"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#inheres_in.Stakeholder_Intention+Requirements_Stakeholder -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#inheres_in.Stakeholder_Intention+Requirements_Stakeholder">
+        <rdfs:domain rdf:resource="RSRO::Stakeholder_Intention"/>
+        <rdfs:range rdf:resource="RSRO::Requirements_Stakeholder"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#instance_of.Hardware_Equipment+Hardware_Type -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#instance_of.Hardware_Equipment+Hardware_Type">
+        <rdfs:domain rdf:resource="SPO::Hardware_Equipment"/>
+        <rdfs:range rdf:resource="SPO::Hardware_Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#instance_of.Software_Function+Software_Function_Universal -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#instance_of.Software_Function+Software_Function_Universal">
+        <rdfs:range rdf:resource="RSRO::Software_Function_Universal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#intends_to_operationalize.Task+Requirement -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#intends_to_operationalize.Task+Requirement">
+        <rdfs:domain rdf:resource="GORO::Task"/>
+        <rdfs:range rdf:resource="GORO::Requirement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#interested_in.Project_Stakeholder+Software_Project -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#interested_in.Project_Stakeholder+Software_Project">
+        <rdfs:domain rdf:resource="SPO::Project_Stakeholder"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#interested_in.Requirements_Stakeholder+Requirement_Artifact -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#interested_in.Requirements_Stakeholder+Requirement_Artifact">
+        <rdfs:domain rdf:resource="RSRO::Requirements_Stakeholder"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Change_Implementer+Change_Accomplishment -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Change_Implementer+Change_Accomplishment">
+        <rdfs:domain rdf:resource="CMPO::Change_Implementer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Change_Request_Evaluator+Request_Evaluation -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Change_Request_Evaluator+Request_Evaluation">
+        <rdfs:domain rdf:resource="CMPO::Change_Request_Evaluator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Change_Requester+Change_Requesting -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Change_Requester+Change_Requesting">
+        <rdfs:domain rdf:resource="CMPO::Change_Requester"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Change_Reviewer+Change_Review -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Change_Reviewer+Change_Review">
+        <rdfs:domain rdf:resource="CMPO::Change_Reviewer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Code_Reviewer+Code_Review -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Code_Reviewer+Code_Review">
+        <rdfs:domain rdf:resource="CPO::Code_Reviewer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Configuration_Auditor+Configuration_Auditing -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Configuration_Auditor+Configuration_Auditing">
+        <rdfs:domain rdf:resource="CMPO::Configuration_Auditor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Configuration_Manager+Baseline_Establishment -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Configuration_Manager+Baseline_Establishment">
+        <rdfs:domain rdf:resource="CMPO::Configuration_Manager"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Configuration_Manager+Configuration_Management_Planning -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Configuration_Manager+Configuration_Management_Planning">
+        <rdfs:domain rdf:resource="CMPO::Configuration_Manager"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Configuration_Manager+Release_Management_and_Delivery -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Configuration_Manager+Release_Management_and_Delivery">
+        <rdfs:domain rdf:resource="CMPO::Configuration_Manager"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Designer+Detailed_Design -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Designer+Detailed_Design">
+        <rdfs:domain rdf:resource="DPO::Designer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Programmer+Coding -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Programmer+Coding">
+        <rdfs:domain rdf:resource="CPO::Programmer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Project_Manager+Quality_Assurance_Planning -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Project_Manager+Quality_Assurance_Planning">
+        <rdfs:domain rdf:resource="SPMO::Project_Manager"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Quality_Auditor+Adherence_Evaluation -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Quality_Auditor+Adherence_Evaluation">
+        <rdfs:domain rdf:resource="QAPO::Quality_Auditor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Quality_Auditor+Noncompliance_Control -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Quality_Auditor+Noncompliance_Control">
+        <rdfs:domain rdf:resource="QAPO::Quality_Auditor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Requirements_Engineer+Conceptual_Modeling -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Requirements_Engineer+Conceptual_Modeling">
+        <rdfs:domain rdf:resource="RSRO::Requirements_Engineer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Requirements_Engineer+Requirements_Documentation -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Requirements_Engineer+Requirements_Documentation">
+        <rdfs:domain rdf:resource="RSRO::Requirements_Engineer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Requirements_Engineer+Requirements_Elicitation -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Requirements_Engineer+Requirements_Elicitation">
+        <rdfs:domain rdf:resource="RSRO::Requirements_Engineer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Requirements_Engineer+Requirements_Negotiation_and_Prioritization -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Requirements_Engineer+Requirements_Negotiation_and_Prioritization">
+        <rdfs:domain rdf:resource="RSRO::Requirements_Engineer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Requirements_Reviewer+Requirements_Verification_and_Validation -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Requirements_Reviewer+Requirements_Verification_and_Validation">
+        <rdfs:domain rdf:resource="RDPO::Requirements_Reviewer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Software_Architect+Architectural_Design -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Software_Architect+Architectural_Design">
+        <rdfs:domain rdf:resource="DPO::Software_Architect"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Stakeholder+Performed_Activity -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Stakeholder+Performed_Activity">
+        <rdfs:domain rdf:resource="SPO::Stakeholder"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Test_Case_Designer+Test_Case_Design -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Test_Case_Designer+Test_Case_Design">
+        <rdfs:domain rdf:resource="ROoST::Test_Case_Designer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Test_Case_Designer+Test_Result_Analysis -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Test_Case_Designer+Test_Result_Analysis">
+        <rdfs:domain rdf:resource="ROoST::Test_Case_Designer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Test_Manager+Test_Planning -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Test_Manager+Test_Planning">
+        <rdfs:domain rdf:resource="ROoST::Test_Manager"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Tester+Test_Coding -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Tester+Test_Coding">
+        <rdfs:domain rdf:resource="ROoST::Tester"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Tester+Test_Execution -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_in_charge_of.Tester+Test_Execution">
+        <rdfs:domain rdf:resource="ROoST::Tester"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_to_perform.Estimated_Stakeholder_Allocation+Estimated_Activity -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_to_perform.Estimated_Stakeholder_Allocation+Estimated_Activity">
+        <rdfs:domain rdf:resource="SPMO::Estimated_Stakeholder_Allocation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_to_perform.Stakeholder_Allocation+Intended_Activity -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#is_to_perform.Stakeholder_Allocation+Intended_Activity">
+        <rdfs:domain rdf:resource="SPO::Stakeholder_Allocation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participates_in.Configuration_Manager+Change_Control -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participates_in.Configuration_Manager+Change_Control">
+        <rdfs:domain rdf:resource="CMPO::Configuration_Manager"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participates_in.Configuration_Manager+Configuration_Auditing -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participates_in.Configuration_Manager+Configuration_Auditing">
+        <rdfs:domain rdf:resource="CMPO::Configuration_Manager"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participates_in.Controller+Program_Copy_Execution -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participates_in.Controller+Program_Copy_Execution"/>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participates_in.Designer+Design_Documentation -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participates_in.Designer+Design_Documentation">
+        <rdfs:domain rdf:resource="DPO::Designer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participates_in.Designer+Design_Evaluation -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participates_in.Designer+Design_Evaluation">
+        <rdfs:domain rdf:resource="DPO::Designer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participates_in.Noncompliance_Responsible+Noncompliance_Control -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participates_in.Noncompliance_Responsible+Noncompliance_Control">
+        <rdfs:domain rdf:resource="QAPO::Noncompliance_Responsible"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participates_in.Performed_Activity+Stakeholder -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participates_in.Performed_Activity+Stakeholder">
+        <rdfs:range rdf:resource="SPO::Stakeholder"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participates_in.Project_Team+Adherence_Evaluation -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participates_in.Project_Team+Adherence_Evaluation"/>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participates_in.Requirements_Engineer+Requirements_Verification_and_Validation -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participates_in.Requirements_Engineer+Requirements_Verification_and_Validation">
+        <rdfs:domain rdf:resource="RSRO::Requirements_Engineer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participates_in.Requirements_Stakeholder+Requirements_Elicitation -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participates_in.Requirements_Stakeholder+Requirements_Elicitation">
+        <rdfs:domain rdf:resource="RSRO::Requirements_Stakeholder"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participates_in.Requirements_Stakeholder+Requirements_Negotiation_and_Prioritization -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participates_in.Requirements_Stakeholder+Requirements_Negotiation_and_Prioritization">
+        <rdfs:domain rdf:resource="RSRO::Requirements_Stakeholder"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participates_in.Requirements_Stakeholder+Requirements_Verification_and_Validation -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participates_in.Requirements_Stakeholder+Requirements_Verification_and_Validation">
+        <rdfs:domain rdf:resource="RSRO::Requirements_Stakeholder"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participates_in.Software_Architect+Design_Documentation -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participates_in.Software_Architect+Design_Documentation">
+        <rdfs:domain rdf:resource="DPO::Software_Architect"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participates_in.Software_Architect+Design_Evaluation -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participates_in.Software_Architect+Design_Evaluation">
+        <rdfs:domain rdf:resource="DPO::Software_Architect"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participates_in.Test_Case_Designer+Test_Planning -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participates_in.Test_Case_Designer+Test_Planning">
+        <rdfs:domain rdf:resource="ROoST::Test_Case_Designer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participates_in.Test_Manager+Test_Result_Analysis -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participates_in.Test_Manager+Test_Result_Analysis">
+        <rdfs:domain rdf:resource="ROoST::Test_Manager"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participation_of.Artifact_Participation+Artifact -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participation_of.Artifact_Participation+Artifact"/>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participation_of.Hardware_Resource_Participation+Hardware_Resource -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participation_of.Hardware_Resource_Participation+Hardware_Resource">
+        <rdfs:domain rdf:resource="SPO::Hardware_Resource_Participation"/>
+        <rdfs:range rdf:resource="SPO::Hardware_Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participation_of.Procedure_Participation+Procedure -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participation_of.Procedure_Participation+Procedure"/>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participation_of.Software_Resource_Participation+Software_Resource -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participation_of.Software_Resource_Participation+Software_Resource"/>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participation_of.Stakeholder_Participation+Stakeholder -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#participation_of.Stakeholder_Participation+Stakeholder">
+        <rdfs:domain rdf:resource="SPO::Stakeholder_Participation"/>
+        <rdfs:range rdf:resource="SPO::Stakeholder"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#performed_by.Software_Measurement_Execution+Measurement_Executor -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#performed_by.Software_Measurement_Execution+Measurement_Executor">
+        <rdfs:range rdf:resource="RSMO::Measurement_Executor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#propositional_content_of.Requirement+Stakeholder_Intention -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#propositional_content_of.Requirement+Stakeholder_Intention">
+        <rdfs:domain rdf:resource="RSRO::Requirement"/>
+        <rdfs:range rdf:resource="RSRO::Stakeholder_Intention"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#propostional_content_of.Assumption+Stakeholder_Belief -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#propostional_content_of.Assumption+Stakeholder_Belief">
+        <rdfs:range rdf:resource="RSRO::Stakeholder_Belief"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#recognized_by.Job_Plan+Organization -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#recognized_by.Job_Plan+Organization"/>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#recognized_by.Standard_Process_Definition_Document+Organization -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#recognized_by.Standard_Process_Definition_Document+Organization"/>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#refers_to.Functional_Requirement+Software_Function_Universal -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#refers_to.Functional_Requirement+Software_Function_Universal">
+        <rdfs:domain rdf:resource="RSRO::Functional_Requirement"/>
+        <rdfs:range rdf:resource="RSRO::Software_Function_Universal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#refers_to.Product_Quality_Requirement+Quality_Characteristic -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#refers_to.Product_Quality_Requirement+Quality_Characteristic">
+        <rdfs:domain rdf:resource="RSRO::Product_Quality_Requirement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#refers_to.Stakeholder_Participation+Stakeholder_Allocation -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#refers_to.Stakeholder_Participation+Stakeholder_Allocation">
+        <rdfs:domain rdf:resource="SPO::Stakeholder_Participation"/>
+        <rdfs:range rdf:resource="SPO::Stakeholder_Allocation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#refers_to.Tracked_Stakeholder_Participation+Estimated_Stakeholder_Allocation -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#refers_to.Tracked_Stakeholder_Participation+Estimated_Stakeholder_Allocation">
+        <rdfs:range rdf:resource="SPMO::Estimated_Stakeholder_Allocation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#relative_to.Test_Result+Test_Case -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#relative_to.Test_Result+Test_Case"/>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#requires.Intended_Activity+Hardware_Type -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#requires.Intended_Activity+Hardware_Type">
+        <rdfs:range rdf:resource="SPO::Hardware_Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#requires.Intended_Activity+Software_Product_Type -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#requires.Intended_Activity+Software_Product_Type"/>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#requires.Standard_Activity+Hardware_Type -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#requires.Standard_Activity+Hardware_Type">
+        <rdfs:range rdf:resource="SPO::Hardware_Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#requires.Standard_Activity+Software_Product_Type -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#requires.Standard_Activity+Software_Product_Type"/>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#responsible_for.Requirements_Engineer+Requirements_Document -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#responsible_for.Requirements_Engineer+Requirements_Document">
+        <rdfs:domain rdf:resource="RSRO::Requirements_Engineer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#responsible_for.Stakeholder+Artifact -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#responsible_for.Stakeholder+Artifact">
+        <rdfs:domain rdf:resource="SPO::Stakeholder"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#to_act_as.Stakeholder_Allocation+Organizational_Role -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#to_act_as.Stakeholder_Allocation+Organizational_Role">
+        <rdfs:domain rdf:resource="SPO::Stakeholder_Allocation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#uses.Level-based_Testing+Test_Hardware_Resource -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#uses.Level-based_Testing+Test_Hardware_Resource">
+        <rdfs:range rdf:resource="ROoST::Test_Hardware_Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#uses.Performed_Activity+Resource -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#uses.Performed_Activity+Resource">
+        <rdfs:range rdf:resource="SPO::Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#written_in.Source_Code+Programming_Language -->
+
+    <owl:ObjectProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#written_in.Source_Code+Programming_Language">
+        <rdfs:range rdf:resource="SwO::Programming_Language"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#Size -->
+
+    <owl:DatatypeProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#Size"/>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#consumption -->
+
+    <owl:DatatypeProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#consumption">
+        <rdfs:domain rdf:resource="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#Device"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#id -->
+
+    <owl:DatatypeProperty rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#id">
+        <rdfs:domain rdf:resource="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#Device"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- CMPO::Change_Implementer -->
+
+    <owl:Class rdf:about="CMPO::Change_Implementer">
+        <rdfs:subClassOf rdf:resource="SPO::Stakeholder"/>
+        <rdfs:comment>Stakeholder responsible for implementing a change in Configuration Items.</rdfs:comment>
+        <SEON1:ontology>CMPO</SEON1:ontology>
+        <SEON1:stereotype>role</SEON1:stereotype>
+    </owl:Class>
+    
+
+
+    <!-- CMPO::Change_Request_Evaluator -->
+
+    <owl:Class rdf:about="CMPO::Change_Request_Evaluator">
+        <rdfs:subClassOf rdf:resource="SPO::Stakeholder"/>
+        <rdfs:comment>Stakeholder responsible for evaluating if a Change Request should be implemented or not.</rdfs:comment>
+        <SEON1:ontology>CMPO</SEON1:ontology>
+        <SEON1:stereotype>role</SEON1:stereotype>
+    </owl:Class>
+    
+
+
+    <!-- CMPO::Change_Requester -->
+
+    <owl:Class rdf:about="CMPO::Change_Requester">
+        <rdfs:subClassOf rdf:resource="SPO::Stakeholder"/>
+        <rdfs:comment>Stakeholder responsible for requesting a change in Configuration Items.</rdfs:comment>
+        <SEON1:ontology>CMPO</SEON1:ontology>
+        <SEON1:stereotype>role</SEON1:stereotype>
+    </owl:Class>
+    
+
+
+    <!-- CMPO::Change_Reviewer -->
+
+    <owl:Class rdf:about="CMPO::Change_Reviewer">
+        <rdfs:subClassOf rdf:resource="SPO::Stakeholder"/>
+        <rdfs:comment>Stakeholder responsible for reviewing the changes in Configuration Items regarding a Change Request.</rdfs:comment>
+        <SEON1:ontology>CMPO</SEON1:ontology>
+        <SEON1:stereotype>role</SEON1:stereotype>
+    </owl:Class>
+    
+
+
+    <!-- CMPO::Configuration_Auditor -->
+
+    <owl:Class rdf:about="CMPO::Configuration_Auditor">
+        <rdfs:subClassOf rdf:resource="SPO::Stakeholder"/>
+        <rdfs:comment>Stakeholder responsible for auditing the Configuration Management related results.</rdfs:comment>
+        <SEON1:ontology>CMPO</SEON1:ontology>
+        <SEON1:stereotype>role</SEON1:stereotype>
+    </owl:Class>
+    
+
+
+    <!-- CMPO::Configuration_Manager -->
+
+    <owl:Class rdf:about="CMPO::Configuration_Manager">
+        <rdfs:subClassOf rdf:resource="SPO::Stakeholder"/>
+        <rdfs:comment>Stakeholder responsible for planning and managing the Configuration Management Process.</rdfs:comment>
+        <SEON1:ontology>CMPO</SEON1:ontology>
+        <SEON1:stereotype>role</SEON1:stereotype>
+    </owl:Class>
+    
+
+
+    <!-- CPO::Code_Reviewer -->
+
+    <owl:Class rdf:about="CPO::Code_Reviewer">
+        <rdfs:subClassOf rdf:resource="SPO::Stakeholder"/>
+        <rdfs:comment>Stakeholder responsible for reviewing the Code according to the Requirements Document and Design Document.</rdfs:comment>
+        <SEON1:ontology>CPO</SEON1:ontology>
+        <SEON1:stereotype>role</SEON1:stereotype>
+    </owl:Class>
+    
+
+
+    <!-- CPO::Programmer -->
+
+    <owl:Class rdf:about="CPO::Programmer">
+        <rdfs:subClassOf rdf:resource="SPO::Stakeholder"/>
+        <rdfs:comment>Stakeholder with programming skills responsible for producing and documenting the software Code.</rdfs:comment>
+        <SEON1:ontology>CPO</SEON1:ontology>
+        <SEON1:stereotype>role</SEON1:stereotype>
+    </owl:Class>
+    
+
+
+    <!-- DPO::Designer -->
+
+    <owl:Class rdf:about="DPO::Designer">
+        <rdfs:subClassOf rdf:resource="SPO::Stakeholder"/>
+        <rdfs:comment>Stakeholder responsible for making the Detailed Design choices for a software.</rdfs:comment>
+        <SEON1:ontology>DPO</SEON1:ontology>
+        <SEON1:stereotype>role</SEON1:stereotype>
+    </owl:Class>
+    
+
+
+    <!-- DPO::Software_Architect -->
+
+    <owl:Class rdf:about="DPO::Software_Architect">
+        <rdfs:subClassOf rdf:resource="SPO::Stakeholder"/>
+        <rdfs:comment>Stakeholder responsible for designing the Software Architecture.</rdfs:comment>
+        <SEON1:ontology>DPO</SEON1:ontology>
+        <SEON1:stereotype>role</SEON1:stereotype>
+    </owl:Class>
+    
+
+
+    <!-- GORO::Atomic_Task -->
+
+    <owl:Class rdf:about="GORO::Atomic_Task">
+        <rdfs:subClassOf rdf:resource="GORO::Task"/>
+        <rdfs:comment>An Atomic Task is a Task that is not decomposed in other tasks.</rdfs:comment>
+        <SEON1:ontology>GORO</SEON1:ontology>
+    </owl:Class>
+    
+
+
+    <!-- GORO::Complex_Task -->
+
+    <owl:Class rdf:about="GORO::Complex_Task">
+        <rdfs:subClassOf rdf:resource="GORO::Task"/>
+        <rdfs:comment>A Complex Task is a Task that is composed in other tasks.</rdfs:comment>
+        <SEON1:ontology>GORO</SEON1:ontology>
+    </owl:Class>
+    
+
+
+    <!-- GORO::Hardgoal -->
+
+    <owl:Class rdf:about="GORO::Hardgoal">
+        <rdfs:comment>Hardgoal is a proposition that is objectively satisfied by a given set of situations.</rdfs:comment>
+        <SEON1:ontology>GORO</SEON1:ontology>
+    </owl:Class>
+    
+
+
+    <!-- GORO::Requirement -->
+
+    <owl:Class rdf:about="GORO::Requirement">
+        <rdfs:subClassOf rdf:resource="RSRO::Requirement"/>
+        <rdfs:comment>A Goal in the scope of a specific problem, that describes environmental conditions to be achieved through a desired solution resulting in satisfaction of the underlying strategic goals. In GORE, these goals can be refined by decomposing them into sub-goals, as well as by defining them by means of alternative goals.</rdfs:comment>
+        <SEON1:ontology>GORO</SEON1:ontology>
+    </owl:Class>
+    
+
+
+    <!-- GORO::Softgoal -->
+
+    <owl:Class rdf:about="GORO::Softgoal">
+        <rdfs:comment>Softgoal is an initial and temporary vague expression of a goal not suficiently defined yet. It refers to a vague quality region whose exact boundaries are unknown. Thus it is not  possible to determine a priori the set of situations that satisfies the softgoal. Its satisfiability is usually related to an agent&apos;s judgement.</rdfs:comment>
+        <SEON1:ontology>GORO</SEON1:ontology>
+    </owl:Class>
+    
+
+
+    <!-- GORO::Task -->
+
+    <owl:Class rdf:about="GORO::Task">
+        <rdfs:comment>A Task is a plan to achieve a goal.</rdfs:comment>
+        <SEON1:ontology>GORO</SEON1:ontology>
+    </owl:Class>
+    
+
+
+    <!-- QAPO::Noncompliance_Responsible -->
+
+    <owl:Class rdf:about="QAPO::Noncompliance_Responsible">
+        <rdfs:subClassOf rdf:resource="SPO::Person_Stakeholder"/>
+        <rdfs:comment>Stakeholder responsible for solving a noncompliance.</rdfs:comment>
+        <SEON1:ontology>QAPO</SEON1:ontology>
+        <SEON1:stereotype>role</SEON1:stereotype>
+    </owl:Class>
+    
+
+
+    <!-- QAPO::Quality_Auditor -->
+
+    <owl:Class rdf:about="QAPO::Quality_Auditor">
+        <rdfs:subClassOf rdf:resource="SPO::Person_Stakeholder"/>
+        <rdfs:comment>Stakeholder responsible for conducting objective evaluations.</rdfs:comment>
+        <SEON1:ontology>QAPO</SEON1:ontology>
+        <SEON1:stereotype>role</SEON1:stereotype>
+    </owl:Class>
+    
+
+
+    <!-- RDPO::Requirements_Reviewer -->
+
+    <owl:Class rdf:about="RDPO::Requirements_Reviewer">
+        <rdfs:subClassOf rdf:resource="SPO::Stakeholder"/>
+        <rdfs:comment>Stakeholder responsible for conducting reviews in requirements artifacts.</rdfs:comment>
+        <SEON1:ontology>RDPO</SEON1:ontology>
+        <SEON1:stereotype>role</SEON1:stereotype>
+    </owl:Class>
+    
+
+
+    <!-- ROoST::Test_Case_Designer -->
+
+    <owl:Class rdf:about="ROoST::Test_Case_Designer">
+        <rdfs:subClassOf rdf:resource="SPO::Stakeholder"/>
+        <rdfs:comment>Stakeholder responsible for designing test cases and analysing test results.</rdfs:comment>
+        <SEON1:ontology>ROoST</SEON1:ontology>
+        <SEON1:stereotype>role</SEON1:stereotype>
+    </owl:Class>
+    
+
+
+    <!-- ROoST::Test_Hardware_Resource -->
+
+    <owl:Class rdf:about="ROoST::Test_Hardware_Resource">
+        <rdfs:subClassOf rdf:resource="SPO::Hardware_Resource"/>
+        <rdfs:comment>Hardware Resource that comprises the Testing Environment of a Project.</rdfs:comment>
+        <SEON1:ontology>ROoST</SEON1:ontology>
+        <SEON1:stereotype>role</SEON1:stereotype>
+    </owl:Class>
+    
+
+
+    <!-- ROoST::Test_Manager -->
+
+    <owl:Class rdf:about="ROoST::Test_Manager">
+        <rdfs:subClassOf rdf:resource="SPO::Stakeholder"/>
+        <rdfs:comment>Stakeholder responsible for planning and managing the testing activities.</rdfs:comment>
+        <SEON1:ontology>ROoST</SEON1:ontology>
+        <SEON1:stereotype>role</SEON1:stereotype>
+    </owl:Class>
+    
+
+
+    <!-- ROoST::Tester -->
+
+    <owl:Class rdf:about="ROoST::Tester">
+        <rdfs:subClassOf rdf:resource="SPO::Stakeholder"/>
+        <rdfs:comment>Stakeholder responsible for coding and executing test cases.</rdfs:comment>
+        <SEON1:ontology>ROoST</SEON1:ontology>
+        <SEON1:stereotype>role</SEON1:stereotype>
+    </owl:Class>
+    
+
+
+    <!-- RSMO::Measurement_Analyst -->
+
+    <owl:Class rdf:about="RSMO::Measurement_Analyst">
+        <rdfs:subClassOf rdf:resource="SPO::Stakeholder"/>
+        <rdfs:comment>Role played by the Stakeholder in charge of Software Measurement Analysis.</rdfs:comment>
+        <SEON1:ontology>RSMO</SEON1:ontology>
+        <SEON1:stereotype>role</SEON1:stereotype>
+    </owl:Class>
+    
+
+
+    <!-- RSMO::Measurement_Executor -->
+
+    <owl:Class rdf:about="RSMO::Measurement_Executor">
+        <rdfs:subClassOf rdf:resource="SPO::Stakeholder"/>
+        <rdfs:comment>Role played by the Stakeholder in charge of Software Measurement Execution. It does not include automated measurement (by tools).</rdfs:comment>
+        <SEON1:ontology>RSMO</SEON1:ontology>
+        <SEON1:stereotype>role</SEON1:stereotype>
+    </owl:Class>
+    
+
+
+    <!-- RSMO::Measurement_Manager -->
+
+    <owl:Class rdf:about="RSMO::Measurement_Manager">
+        <rdfs:subClassOf rdf:resource="SPO::Stakeholder"/>
+        <rdfs:comment>Role played by the Stakeholder in charge of Software Measurement Planning.</rdfs:comment>
+        <SEON1:ontology>RSMO</SEON1:ontology>
+        <SEON1:stereotype>role</SEON1:stereotype>
+    </owl:Class>
+    
+
+
+    <!-- RSRO::Functional_Requirement -->
+
+    <owl:Class rdf:about="RSRO::Functional_Requirement">
+        <rdfs:subClassOf rdf:resource="RSRO::Requirement"/>
+        <rdfs:comment>Requirement defining a function to be available in the product being built.</rdfs:comment>
+        <SEON1:ontology>RSRO</SEON1:ontology>
+        <SEON1:stereotype>mode</SEON1:stereotype>
+    </owl:Class>
+    
+
+
+    <!-- RSRO::Non-Functional_Requirement -->
+
+    <owl:Class rdf:about="RSRO::Non-Functional_Requirement">
+        <rdfs:subClassOf rdf:resource="RSRO::Requirement"/>
+        <rdfs:comment>Requirement defining criteria or capabilities for the product.</rdfs:comment>
+        <SEON1:ontology>RSRO</SEON1:ontology>
+        <SEON1:stereotype>mode</SEON1:stereotype>
+    </owl:Class>
+    
+
+
+    <!-- RSRO::Product_Quality_Requirement -->
+
+    <owl:Class rdf:about="RSRO::Product_Quality_Requirement">
+        <rdfs:subClassOf rdf:resource="RSRO::Non-Functional_Requirement"/>
+        <rdfs:comment>Non-Functional Requirement referring to a Quality Characteristic of the software product.</rdfs:comment>
+        <SEON1:ontology>RSRO</SEON1:ontology>
+        <SEON1:stereotype>mode</SEON1:stereotype>
+    </owl:Class>
+    
+
+
+    <!-- RSRO::Requirement -->
+
+    <owl:Class rdf:about="RSRO::Requirement">
+        <rdfs:comment>Goal to be achieved, representing a condition or capacity needed for the system users for solving a problem.</rdfs:comment>
+        <SEON1:ontology>RSRO</SEON1:ontology>
+        <SEON1:stereotype>mode</SEON1:stereotype>
+    </owl:Class>
+    
+
+
+    <!-- RSRO::Requirements_Engineer -->
+
+    <owl:Class rdf:about="RSRO::Requirements_Engineer">
+        <rdfs:subClassOf rdf:resource="SPO::Stakeholder"/>
+        <rdfs:comment>Stakeholder responsible for conducting the requirements development activities.</rdfs:comment>
+        <SEON1:ontology>RSRO</SEON1:ontology>
+        <SEON1:stereotype>role</SEON1:stereotype>
+    </owl:Class>
+    
+
+
+    <!-- RSRO::Requirements_Stakeholder -->
+
+    <owl:Class rdf:about="RSRO::Requirements_Stakeholder">
+        <rdfs:subClassOf rdf:resource="SPO::Stakeholder"/>
+        <rdfs:comment>Stakeholder that provides needs and expectations for the product.</rdfs:comment>
+        <SEON1:ontology>RSRO</SEON1:ontology>
+        <SEON1:stereotype>role</SEON1:stereotype>
+    </owl:Class>
+    
+
+
+    <!-- RSRO::Software_Function_Universal -->
+
+    <owl:Class rdf:about="RSRO::Software_Function_Universal">
+        <rdfs:comment>Function Universal denoting the types of functions expected in a software.</rdfs:comment>
+        <SEON1:ontology>RSRO</SEON1:ontology>
+        <SEON1:stereotype>2ndOT</SEON1:stereotype>
+    </owl:Class>
+    
+
+
+    <!-- RSRO::Stakeholder_Belief -->
+
+    <owl:Class rdf:about="RSRO::Stakeholder_Belief">
+        <rdfs:comment>The belief of Requirements Stakeholders regarding the environment of interest that are described in terms of Assumptions.</rdfs:comment>
+        <SEON1:ontology>RSRO</SEON1:ontology>
+    </owl:Class>
+    
+
+
+    <!-- RSRO::Stakeholder_Intention -->
+
+    <owl:Class rdf:about="RSRO::Stakeholder_Intention">
+        <rdfs:comment>The intention of Requirements Stakeholders that defines requirements to be achieved.</rdfs:comment>
+        <SEON1:ontology>RSRO</SEON1:ontology>
+    </owl:Class>
+    
+
+
+    <!-- SPMO::Estimated_Stakeholder_Allocation -->
+
+    <owl:Class rdf:about="SPMO::Estimated_Stakeholder_Allocation">
+        <rdfs:subClassOf rdf:resource="SPO::Stakeholder_Allocation"/>
+        <rdfs:comment></rdfs:comment>
+        <SEON1:ontology>SPMO</SEON1:ontology>
+    </owl:Class>
+    
+
+
+    <!-- SPMO::Project_Manager -->
+
+    <owl:Class rdf:about="SPMO::Project_Manager">
+        <rdfs:subClassOf rdf:resource="SPO::Person_Stakeholder"/>
+        <rdfs:comment>Stakeholder responsible for managing a Project.</rdfs:comment>
+        <SEON1:ontology>SPMO</SEON1:ontology>
+        <SEON1:stereotype>role</SEON1:stereotype>
+    </owl:Class>
+    
+
+
+    <!-- SPO::Hardware_Equipment -->
+
+    <owl:Class rdf:about="SPO::Hardware_Equipment">
+        <rdfs:comment>Physical Object used for running software programs or to support some related action.</rdfs:comment>
+        <SEON1:ontology>SPO</SEON1:ontology>
+        <SEON1:stereotype>kind</SEON1:stereotype>
+    </owl:Class>
+    
+
+
+    <!-- SPO::Hardware_Resource -->
+
+    <owl:Class rdf:about="SPO::Hardware_Resource">
+        <rdfs:subClassOf rdf:resource="SPO::Hardware_Equipment"/>
+        <rdfs:subClassOf rdf:resource="SPO::Resource"/>
+        <rdfs:comment>Hardware Equipment when used as Resource of some process activity.</rdfs:comment>
+        <SEON1:ontology>SPO</SEON1:ontology>
+        <SEON1:stereotype>role</SEON1:stereotype>
+    </owl:Class>
+    
+
+
+    <!-- SPO::Hardware_Resource_Participation -->
+
+    <owl:Class rdf:about="SPO::Hardware_Resource_Participation">
+        <rdfs:comment>The participation of a Hardware Equipment as a Resource in a Performed Activity.</rdfs:comment>
+        <SEON1:ontology>SPO</SEON1:ontology>
+        <SEON1:stereotype>event</SEON1:stereotype>
+    </owl:Class>
+    
+
+
+    <!-- SPO::Hardware_Type -->
+
+    <owl:Class rdf:about="SPO::Hardware_Type">
+        <rdfs:comment>Object Kind which is the powertype of Hardware Equipment, classifying its specializations.</rdfs:comment>
+        <SEON1:ontology>SPO</SEON1:ontology>
+        <SEON1:stereotype>2ndOT</SEON1:stereotype>
+    </owl:Class>
+    
+
+
+    <!-- SPO::Person_Stakeholder -->
+
+    <owl:Class rdf:about="SPO::Person_Stakeholder">
+        <rdfs:subClassOf rdf:resource="SPO::Stakeholder"/>
+        <rdfs:comment>Person interested or affected by the process activities or their results.</rdfs:comment>
+        <SEON1:ontology>SPO</SEON1:ontology>
+        <SEON1:stereotype>role</SEON1:stereotype>
+    </owl:Class>
+    
+
+
+    <!-- SPO::Project_Stakeholder -->
+
+    <owl:Class rdf:about="SPO::Project_Stakeholder">
+        <rdfs:subClassOf rdf:resource="SPO::Stakeholder"/>
+        <rdfs:comment>Stakeholder interested in a particular Project.</rdfs:comment>
+        <SEON1:ontology>SPO</SEON1:ontology>
+        <SEON1:stereotype>rolemixin</SEON1:stereotype>
+    </owl:Class>
+    
+
+
+    <!-- SPO::Resource -->
+
+    <owl:Class rdf:about="SPO::Resource">
+        <rdfs:comment>Software Product or Hardware Equipment when used by a process activity.</rdfs:comment>
+        <SEON1:ontology>SPO</SEON1:ontology>
+        <SEON1:stereotype>rolemixin</SEON1:stereotype>
+    </owl:Class>
+    
+
+
+    <!-- SPO::Software_Organization -->
+
+    <owl:Class rdf:about="SPO::Software_Organization">
+        <rdfs:comment></rdfs:comment>
+        <SEON1:ontology>SPO</SEON1:ontology>
+    </owl:Class>
+    
+
+
+    <!-- SPO::Stakeholder -->
+
+    <owl:Class rdf:about="SPO::Stakeholder">
+        <rdfs:comment>Agent (Person, Team or Organization) interested or affected by the process activities or results.</rdfs:comment>
+        <SEON1:ontology>SPO</SEON1:ontology>
+        <SEON1:stereotype>rolemixin</SEON1:stereotype>
+    </owl:Class>
+    
+
+
+    <!-- SPO::Stakeholder_Allocation -->
+
+    <owl:Class rdf:about="SPO::Stakeholder_Allocation">
+        <rdfs:comment>Social Relator representing a Stakeholder allocated to perform a Scheduled Activity acting an Organizational Role.</rdfs:comment>
+        <SEON1:ontology>SPO</SEON1:ontology>
+        <SEON1:stereotype>relator</SEON1:stereotype>
+    </owl:Class>
+    
+
+
+    <!-- SPO::Stakeholder_Participation -->
+
+    <owl:Class rdf:about="SPO::Stakeholder_Participation">
+        <rdfs:comment>The participation of a Stakeholder in a Performed Activity, playing an Organizational Role.</rdfs:comment>
+        <SEON1:ontology>SPO</SEON1:ontology>
+        <SEON1:stereotype>event</SEON1:stereotype>
+    </owl:Class>
+    
+
+
+    <!-- SwO::Programming_Language -->
+
+    <owl:Class rdf:about="SwO::Programming_Language">
+        <rdfs:comment>A language used to express computer programs.</rdfs:comment>
+        <SEON1:ontology>SwO</SEON1:ontology>
+        <SEON1:stereotype>kind</SEON1:stereotype>
+    </owl:Class>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#Device -->
+
+    <owl:Class rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#Device">
+        <rdfs:comment>Machine/microcontroller able to execute programs in a IoT environment</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#Goal -->
+
+    <owl:Class rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#Goal">
+        <rdfs:comment>Macro/micro objective that can be pursued thanks to an IoT environment</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#Location -->
+
+    <owl:Class rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#Location">
+        <rdfs:comment>Place that can be a city or a lab where some activities can be executed</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#Casablanca -->
+
+    <owl:NamedIndividual rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#Casablanca">
+        <rdf:type rdf:resource="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#Ibiza -->
+
+    <owl:NamedIndividual rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#Ibiza">
+        <rdf:type rdf:resource="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#airConditioning -->
+
+    <owl:NamedIndividual rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#airConditioning">
+        <rdf:type rdf:resource="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#Device"/>
+        <isLocatedAt rdf:resource="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#Ibiza"/>
+        <consumption rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5000</consumption>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">117456</id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#fan -->
+
+    <owl:NamedIndividual rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#fan">
+        <rdf:type rdf:resource="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#Device"/>
+        <isLocatedAt rdf:resource="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#Casablanca"/>
+        <consumption rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</consumption>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">111111</id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#increaseTemperature -->
+
+    <owl:NamedIndividual rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#increaseTemperature">
+        <rdf:type rdf:resource="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#Goal"/>
+        <isRealizedBy rdf:resource="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#airConditioning"/>
+        <isRealizedBy rdf:resource="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#fan"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#lab01 -->
+
+    <owl:NamedIndividual rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#lab01">
+        <rdf:type rdf:resource="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#Location"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#lamp -->
+
+    <owl:NamedIndividual rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#lamp">
+        <rdf:type rdf:resource="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#Device"/>
+        <isLocatedAt rdf:resource="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#lab01"/>
+        <consumption rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</consumption>
+        <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">222222</id>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#lightsOn -->
+
+    <owl:NamedIndividual rdf:about="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#lightsOn">
+        <rdf:type rdf:resource="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#Goal"/>
+        <isRealizedBy rdf:resource="https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#lamp"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

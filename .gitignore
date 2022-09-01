@@ -6,3 +6,4 @@ frontend/package-lock.json
 frontend/package-lock.json
 IoTAware/src/test/java/com/SPM2021MTV/IoTAware/chromedriver_win32/chromedriver.exe
 *.bpmn
+demo/src/main/resources/queryResults.json
