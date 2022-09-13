@@ -48,7 +48,7 @@ function Cockpit() {
   function getAllMyProcessDefinitions(id) {
     $.ajax({
       method: "GET",
-      url: _urlNuovo  + "/rest/process-definition?tenantIdIn=" + id,
+      url: _urlNuovo  + "/engine-rest/process-definition?tenantIdIn=" + id,
       success: function (data) {
         setMyProcessDefinitions(data);
 
@@ -64,7 +64,7 @@ function Cockpit() {
 
     $.ajax({
       method: "GET",
-      url: _urlNuovo  + "/rest/deployment?tenantIdIn=" + id,
+      url: _urlNuovo  + "/engine-rest/deployment?tenantIdIn=" + id,
       success: function (data) {
         setMyDeployments(data);
 
@@ -80,7 +80,7 @@ function Cockpit() {
 
     $.ajax({
       method: "GET",
-      url: _urlNuovo  + "/rest/process-instance?tenantIdIn=" + id,
+      url: _urlNuovo  + "/engine-rest/process-instance?tenantIdIn=" + id,
       success: function (data) {
         setMyInstances(data);
 
@@ -96,7 +96,7 @@ function Cockpit() {
 
     $.ajax({
       method: "GET",
-      url: _urlNuovo  + "/rest/task?tenantIdIn=" + id,
+      url: _urlNuovo  + "/engine-rest/task?tenantIdIn=" + id,
       success: function (data) {
         setMyTasks(data);
 
@@ -112,7 +112,7 @@ function Cockpit() {
 
     $.ajax({
       method: "GET",
-      url: _urlNuovo  + "/rest/incident?tenantIdIn=" + id,
+      url: _urlNuovo  + "/engine-rest/incident?tenantIdIn=" + id,
       success: function (data) {
         setMyIncidents(data);
 
@@ -128,7 +128,7 @@ function Cockpit() {
 
     $.ajax({
       method: "GET",
-      url: _urlNuovo  + "/rest/decision-definition?tenantIdIn=" + id,
+      url: _urlNuovo  + "/engine-rest/decision-definition?tenantIdIn=" + id,
       success: function (data) {
         setMyDecisions(data);
 
@@ -144,7 +144,7 @@ function Cockpit() {
 
     $.ajax({
       method: "GET",
-      url: _urlNuovo  + "/rest/case-definition?tenantIdIn=" + id,
+      url: _urlNuovo  + "/engine-rest/case-definition?tenantIdIn=" + id,
       success: function (data) {
         setMyCases(data);
 

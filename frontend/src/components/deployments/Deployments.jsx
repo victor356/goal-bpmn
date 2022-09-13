@@ -34,7 +34,7 @@ function Deployments() {
   function getAllMyProcessDefinitions(id) {
     $.ajax({
       method: "GET",
-      url: _urlNuovo + "/rest/process-definition?tenantIdIn=" + id,
+      url: _urlNuovo + "/engine-rest/process-definition?tenantIdIn=" + id,
       success: function (data) {
         setMyProcessDefinitions(data);
         console.log("ProcessDefinition", data);
@@ -51,7 +51,7 @@ function Deployments() {
 
     $.ajax({
       method: "GET",
-      url: _urlNuovo + "/rest/deployment?tenantIdIn=" + id,
+      url: _urlNuovo + "/engine-rest/deployment?tenantIdIn=" + id,
       success: function (data) {
         setMyDeployments(data);
         console.log("deployments", data);

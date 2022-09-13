@@ -148,7 +148,7 @@ function Profile() {
 
         $.ajax({
             method: 'POST',
-            url: _urlNuovo + "/rest/deployment/create",
+            url: _urlNuovo + "/engine-rest/deployment/create",
             data: data,
             processData: false,
             contentType: false
@@ -181,7 +181,7 @@ function Profile() {
     function getAllModels() {
         $.ajax({
             method: "GET",
-            url: _urlNuovo + "/rest/process-definition",
+            url: _urlNuovo + "/engine-rest/process-definition",
             success: function (data) {
                 setProcess(data);
             },
@@ -200,7 +200,7 @@ function Profile() {
             if (name === d.resource) {
                 $.ajax({
                     method: "DELETE",
-                    url: _urlNuovo + "/rest/process-definition/" + d.id,
+                    url: _urlNuovo + "/engine-rest/process-definition/" + d.id,
                     success: function (data) {
                         console.log("data", data);
                     },
@@ -210,7 +210,7 @@ function Profile() {
                 })
                 $.ajax({
                     method: "DELETE",
-                    url: _urlNuovo + "/rest/deployment/" + d.deploymentId + "?cascade=true",
+                    url: _urlNuovo + "/engine-rest/deployment/" + d.deploymentId + "?cascade=true",
                     success: function (data) {
                         console.log("data", data);
                     },

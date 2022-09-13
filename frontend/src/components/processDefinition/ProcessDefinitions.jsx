@@ -37,7 +37,7 @@ function ProcessDefinitions(processDefinitions) {
   function getAllMyProcessDefinitions(id) {
     $.ajax({
       method: "GET",
-      url: _urlNuovo + "/rest/process-definition?tenantIdIn=" + id,
+      url: _urlNuovo + "/engine-rest/process-definition?tenantIdIn=" + id,
       success: function (data) {
         setMyProcessDefinitions(data);
         console.log("data", data);
@@ -53,7 +53,7 @@ function ProcessDefinitions(processDefinitions) {
 
     $.ajax({
       method: "GET",
-      url: _urlNuovo + "/rest/incident/count?tenantIdIn=" + id + "&processDefinitionId=" + processDefinitionId,
+      url: _urlNuovo + "/engine-rest/incident/count?tenantIdIn=" + id + "&processDefinitionId=" + processDefinitionId,
       success: function (data) {
         setMyIncidents(data.count);
         console.log("incidents: ", data.count);
@@ -70,7 +70,7 @@ function ProcessDefinitions(processDefinitions) {
 
     $.ajax({
       method: "GET",
-      url: _urlNuovo + "/rest/process-instance?tenantIdIn=" + id + "&processDefinitionId=" + processDefinitionId,
+      url: _urlNuovo + "/engine-rest/process-instance?tenantIdIn=" + id + "&processDefinitionId=" + processDefinitionId,
       success: function (data) {
         setMyInstances(data);
 

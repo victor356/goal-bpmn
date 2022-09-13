@@ -12,22 +12,22 @@ function Menu({ menuOpen, setMenuOpen }) {
                 <Link to="/" style={{ color: '#fff', textDecoration: 'none' }}>
                     <li onClick={() => setMenuOpen(false)}>Home</li>
                 </Link>
-                <Link to="/profile" style={{ color: '#fff', textDecoration: 'none' }}>
+                {/* <Link to="/profile" style={{ color: '#fff', textDecoration: 'none' }}>
                     <li onClick={() => setMenuOpen(false)}>Profile</li>
-                </Link>
+                </Link> */}
                 <Link to="/portfolio" style={{ color: '#fff', textDecoration: 'none' }}>
                     <li onClick={() => setMenuOpen(false)}>IoT Devices</li>
                 </Link>
-                <Link to="/works" style={{ color: '#fff', textDecoration: 'none' }}>
+                {/* <Link to="/works" style={{ color: '#fff', textDecoration: 'none' }}>
                     <li onClick={() => setMenuOpen(false)}>Technologies</li>
-                </Link>
+                </Link> */}
                 <Link to="/bpmnModeler" style={{ color: '#fff', textDecoration: 'none' }}>
                     <li onClick={() => setMenuOpen(false)}>Bpmn Modeler</li>
                 </Link>
-                <Link to="/cockpit" style={{ color: '#fff', textDecoration: 'none' }}>
+                {/* <Link to="/cockpit" style={{ color: '#fff', textDecoration: 'none' }}>
                     <li onClick={() => setMenuOpen(false)}>Cockpit</li>
-                </Link>
-                <div className='logout'>
+                </Link> */}
+                {/* <div className='logout'>
                 <Link to="/login"  style={{ color: '#fff', textDecoration: 'none' }}>
                     <li style={{
                         color: 'crimson',
@@ -38,7 +38,7 @@ function Menu({ menuOpen, setMenuOpen }) {
                         Logout
                     </li>
                 </Link>
-                </div>
+                </div> */}
             </ul>
         </div>
     );

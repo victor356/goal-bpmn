@@ -1,16 +1,19 @@
 package com.example.demo;
 
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.StringReader;
+import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
 import org.apache.jena.fuseki.main.FusekiServer;
-import org.apache.jena.iri.impl.Main;
 import org.apache.jena.ontology.OntModel;
 import org.apache.jena.ontology.OntModelSpec;
 import org.apache.jena.query.Dataset;
@@ -22,14 +25,16 @@ import org.apache.jena.query.QuerySolution;
 import org.apache.jena.query.QuerySolutionMap;
 import org.apache.jena.query.ResultSet;
 import org.apache.jena.query.ResultSetFormatter;
-import org.apache.jena.rdf.model.Literal;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.riot.RDFDataMgr;
 import org.apache.jena.tdb.TDBFactory;
-import org.apache.jena.util.FileManager;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -67,43 +72,56 @@ public class Controller {
         return "Fatto";
     }
 
-    @GetMapping("/query")
-    public String test() {
+    @PostMapping("/query")
+    public String receiveQuery(@RequestBody String query)
+            throws UnsupportedEncodingException, FileNotFoundException {
 
-        FileManager.getInternal().addLocatorClassLoader(Main.class.getClassLoader());
+        query = query.substring(0, query.length() - 1);
+        String result = java.net.URLDecoder.decode(query, StandardCharsets.UTF_8.name());
+        OntModel m = getModel();
+        loadData(m);
+        return showQuery(m, result);
 
-        FileManager.getInternal().loadModelInternal(System.getProperty("user.dir") +
-                "/goal.owl");
-        // String path ="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#";
-        String path = "https://dev.nemo.inf.ufes.br/seon/SEON.owl";
-        Model model = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
-        model.read(path);
-        model.write(System.out);
-        String queryString = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> " +
-
-                "SELECT ?subject ?object " +
-                "WHERE { ?subject rdfs:subClassOf ?object } . ";
-
-        Query query = QueryFactory.create(queryString);
-        QueryExecution qexec = QueryExecutionFactory.create(query, model);
-        try {
-            ResultSet results = qexec.execSelect();
-            while (results.hasNext()) {
-                QuerySolution soln = results.nextSolution();
-                Literal name = soln.getLiteral("subject");
-                System.out.println(name);
-            }
-        } finally {
-            qexec.close();
-        }
-
-        return "Query done";
     }
 
-    public static final String SOURCE = "./src/main/resources/";
+    // @GetMapping("/query")
+    // public String test() {
+
+    // FileManager.getInternal().addLocatorClassLoader(Main.class.getClassLoader());
+
+    // FileManager.getInternal().loadModelInternal(System.getProperty("user.dir") +
+    // "/goal.owl");
+    // // String path ="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#";
+    // String path = "https://dev.nemo.inf.ufes.br/seon/SEON.owl";
+    // Model model = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
+    // model.read(path);
+    // model.write(System.out);
+    // String queryString = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> "
+    // +
+
+    // "SELECT ?subject ?object " +
+    // "WHERE { ?subject rdfs:subClassOf ?object } . ";
+
+    // Query query = QueryFactory.create(queryString);
+    // QueryExecution qexec = QueryExecutionFactory.create(query, model);
+    // try {
+    // ResultSet results = qexec.execSelect();
+    // while (results.hasNext()) {
+    // QuerySolution soln = results.nextSolution();
+    // Literal name = soln.getLiteral("subject");
+    // System.out.println(name);
+    // }
+    // } finally {
+    // qexec.close();
+    // }
+
+    // return "Query done";
+    // }
+
+    public static final String SOURCE = "./demo/src/main/resources/";
 
     @GetMapping("/sparql")
-    public String run() {
+    public void run() throws FileNotFoundException {
         OntModel m = getModel();
         loadData(m);
         String prefix = "prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n" +
@@ -113,11 +131,13 @@ public class Controller {
                 "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>" +
                 "PREFIX base: <https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#>";
 
-        return showQuery(m,
+        showQuery(m,
                 prefix +
-               // "SELECT * WHERE {base:lightsOn base:isRealizedBy ?devices . ?devices base:id ?id . ?devices base:consumption ?consumption . ?devices base:isLocatedAt base:lab01 . }"
+                // "SELECT * WHERE {base:lightsOn base:isRealizedBy ?devices . ?devices base:id
+                // ?id . ?devices base:consumption ?consumption . ?devices base:isLocatedAt
+                // base:lab01 . }"
 
-               "SELECT DISTINCT ?devices ?id ?consume  WHERE {base:increaseTemperature base:isRealizedBy ?devices . ?devices base:id ?id . ?devices base:consumption ?consume . }"
+                        "SELECT DISTINCT ?devices ?id ?consume  WHERE {base:increaseTemperature base:isRealizedBy ?devices . ?devices base:id ?id . ?devices base:consumption ?consume . }"
 
         );
     }
@@ -168,64 +188,76 @@ public class Controller {
         return list;
     }
 
-
-
     QuerySolutionMap map = new QuerySolutionMap();
 
     // static public void outputAsJSON(ResultSet resultSet)
     // { ResultSetFormatter.outputAsJSON(JSONOutputStream.class, resultSet) ; }
 
-    protected String showQuery(Model m, String q) {
+    protected String showQuery(Model m, String q) throws FileNotFoundException {
 
         List<QuerySolution> pippo = new LinkedList<QuerySolution>();
         List<String> pippo1 = new LinkedList<String>();
         Query query = QueryFactory.create(q);
-        try (QueryExecution qexec = QueryExecutionFactory.create(query, m)) {
-            ResultSet results = qexec.execSelect();
+        QueryExecution qexec = QueryExecutionFactory.create(query, m);
+        ResultSet results = qexec.execSelect();
 
-            final OutputStream os = new FileOutputStream("src/main/resources/queryResults.json");
-            // final PrintStream printStream = new PrintStream(os);
+        final OutputStream os = new FileOutputStream(SOURCE + "queryResults.json");
+        // final PrintStream printStream = new PrintStream(os);
 
-            // ObjectOutputStream objOut = new ObjectOutputStream(fileOut);
-            ResultSetFormatter.outputAsJSON(os, results);
+        // ObjectOutputStream objOut = new ObjectOutputStream(fileOut);
+        ResultSetFormatter.outputAsJSON(os, results);
 
-            // printStream.close();
-           
-            // devo sottrarre i link della ont, sennò il toString me li leva, oppure fare in
-            // modo di stampare anche quello
-            // results.forEachRemaining(t -> {System.out.println(t); map.addAll(t);});
-            // System.out.println(map);
-            // System.out.println(ResultSetFormatter.asText(results));
-            // pippo = toList(results);
-            // pippo1=getResourcesOfResultSet(pippo);
-            // System.out.println(pippo1);
-            // pippo.stream().forEach(t-> System.out.println(t)); //elementi ordinati per
-            // righe
-            // pippo1.stream().forEach(t->System.out.println(t));
+        return "done";
+        // printStream.close();
 
-            // results.forEachRemaining(t -> materialize(t));
-            // results.getResultVars().iterator().forEachRemaining(t->
-            // System.out.println(t));
-            // results.forEachRemaining(t ->System.out.println(t.get("?id")));
-            // results.forEachRemaining(t ->System.out.println(t.get("?devices")));
-            // results.forEachRemaining(t ->System.out.println(t.get("?consume")));
-            // t.varNames().forEachRemaining(d->System.out.println(d)));
-            //
+        // devo sottrarre i link della ont, sennò il toString me li leva, oppure fare in
+        // modo di stampare anche quello
+        // results.forEachRemaining(t -> {System.out.println(t); map.addAll(t);});
+        // System.out.println(map);
+        // System.out.println(ResultSetFormatter.asText(results));
+        // pippo = toList(results);
+        // pippo1=getResourcesOfResultSet(pippo);
+        // System.out.println(pippo1);
+        // pippo.stream().forEach(t-> System.out.println(t)); //elementi ordinati per
+        // righe
+        // pippo1.stream().forEach(t->System.out.println(t));
 
-            // con var names stampa la determinata colonna della soluzione
-            // con get possiamo prendere il valore di ogni colonna, mentre con il metodo
-            // vecchio e più semplice stampa ogni riga
-            // listProperties().forEach(d -> System.out.println(d)) );
-            // results.forEachRemaining(t -> pippo.add(t));
-            // pippo.forEach(t -> System.out.println(t.getResource("?consume ")));
+        // results.forEachRemaining(t -> materialize(t));
+        // results.getResultVars().iterator().forEachRemaining(t->
+        // System.out.println(t));
+        // results.forEachRemaining(t ->System.out.println(t.get("?id")));
+        // results.forEachRemaining(t ->System.out.println(t.get("?devices")));
+        // results.forEachRemaining(t ->System.out.println(t.get("?consume")));
+        // t.varNames().forEachRemaining(d->System.out.println(d)));
+        //
 
-            // ResultSetFormatter.out(results, m);
+        // con var names stampa la determinata colonna della soluzione
+        // con get possiamo prendere il valore di ogni colonna, mentre con il metodo
+        // vecchio e più semplice stampa ogni riga
+        // listProperties().forEach(d -> System.out.println(d)) );
+        // results.forEachRemaining(t -> pippo.add(t));
+        // pippo.forEach(t -> System.out.println(t.getResource("?consume ")));
 
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        return "";
+        // ResultSetFormatter.out(results, m);
+
+    }
+
+    @GetMapping("/getResults")
+    public Object getResults() throws IOException, ParseException {
+
+        
+          //JSON parser object to parse read file
+          JSONParser jsonParser = new JSONParser();
+         
+         FileReader reader = new FileReader(SOURCE+"queryResults.json");
+          
+              //Read JSON file
+              Object  obj = jsonParser.parse(reader);
+            //  JSONArray employeeList = (JSONArray) obj;
+            
+
+              return obj;
+   
 
     }
 

@@ -1,80 +1,61 @@
-import React, { useEffect, useState } from "react";
-import PortfolioList from "../portfolioList/PortfolioList";
-import "./portfolio.scss";
-import {
-  thorPortfolio,
-  capPortfolio,
-  hulkPortfolio,
-  ironmanPortfolio
-} from '../../data';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import axios from 'axios';
 
-function Portfolio() {
+class Portfolio extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {value: ''};
 
-  const [selected, setSelected] = useState("thor");
-  const [data, setData] = useState([]);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
 
-  const list = [
-    {
-      id: "thor",
-      title: "Ventilatore"
-    },
-    {
-      id: "ironman",
-      title: "Condizionatore"
-    },
-    {
-      id: "hulk",
-      title: "Sensore X"
-    },
-    {
-      id: "cap",
-      title: "Sensore Y"
-    },
-  ]
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
 
-  useEffect(() => {
-    switch (selected) {
-      case "thor":
-        setData(thorPortfolio);
-        break;
-      case "ironman":
-        setData(ironmanPortfolio);
-        break;
-      case "hulk":
-        setData(hulkPortfolio);
-        break;
-      case "cap":
-        setData(capPortfolio);
-        break;
-      default:
-        setData(thorPortfolio);
-    }
-  }, [selected])
+  handleSubmit(event) {
+    event.preventDefault();
 
-  return (
-    <div className="portfolio" id="portfolio">
-      <h1>IoT Devices</h1>
-      <ul>
-        {list.map(item => (
-          <PortfolioList
-            id={item.id}
-            title={item.title}
-            active={selected === item.id}
-            setSelected={setSelected} />
-        ))}
-      </ul>
+  //  alert("E' stato inserito un nome: " + this.state.value);
+ // console.log(JSON.stringify(this.state.value))
+
+    axios.post('http://localhost:8080/query', (this.state.value))
+    .then(response=>{
+      console.log(response.data);
+     console.log("asdasdasd1");
+
+
+    })
+    .catch(error=>{
+     console.log(error)
+     console.log("asdasdasd2");
+    })
+  }
+
+  render() {
+    return (
+      
+      <div className="bpmn" id="bpmn">
+      <h1>Bpmn Modeler</h1>
       <div className="container">
-
-        {data.map((d) => (
-          <div className="item">
-            <img src={d.img} alt="" />
-            <h3>{d.title}</h3>
-          </div>
-        ))}
-
+      <form onSubmit={this.handleSubmit}>
+        <h1>
+      <label>
+        Insert query here:
+        <br/>
+        <textarea value={this.state.value} onChange={this.handleChange}  style={{ height: "30vh", width: "60vw" }} />
+      </label>
+      </h1>
+      <input type="submit" value="Submit" />
+    </form>
       </div>
     </div>
-  );
+
+      
+    );
+  }
 }
 
 export default Portfolio;

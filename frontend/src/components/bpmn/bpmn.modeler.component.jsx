@@ -41,14 +41,14 @@ class BpmnModelerComponent extends Component {
     }
 
     loadCurrentlyLoggedInUser() {
-        getCurrentUser()
-            .then(response => {
-                this.setState({
-                    currentUser: response,
-                });
-            }).catch(error => {
-                console.log("error", error);
-            });
+        // getCurrentUser()
+        //     .then(response => {
+        //         this.setState({
+        //             currentUser: response,
+        //         });
+        //     }).catch(error => {
+        //         console.log("error", error);
+        //     });
     }
 
     componentDidMount = () => {
@@ -73,10 +73,10 @@ class BpmnModelerComponent extends Component {
 
                 CamundaPropertiesProviderModule,
                 CamundaModdleExtension,
-                CustomPaletteProvider,
-                CustomRendererModule
+               // CustomPaletteProvider,
+               // CustomRendererModule
             ],
-            elementTemplates: templates,
+          //  elementTemplates: templates,
             moddleExtensions: {
                 camunda: camundaModdleDescriptor,
                 camunda: CamundaModdlePackage
@@ -140,7 +140,7 @@ class BpmnModelerComponent extends Component {
            formData1.append("tenant-id", props.id);
             $.ajax({
                 method: 'POST',
-                url: _urlNuovo + "/rest/deployment/create",
+                url: _urlNuovo + "/engine-rest/deployment/create",
                 data: formData1,
                 processData: false,
                 contentType: false
@@ -230,12 +230,12 @@ class BpmnModelerComponent extends Component {
                 <div id="propview" style={{ width: '25%', height: '100%', float: 'right', maxHeight: '100%', overflowX: 'auto' }}></div>
                 <div id="bpmnview" style={{ width: '75%', height: '100%', float: 'left' }}></div>
                 <div className="modelerBPMN">
-                    <button className="downloadButton" onClick={() => { this.Validate(this.state.currentUser) }}>Save</button>
-                    <ExternalLink href={_urlNuovo} className="link"><button className="validateButton" onClick={() => { this.Validate(this.state.currentUser) }}>Deploy</button></ExternalLink>
+                    {/* <button className="downloadButton" onClick={() => { this.Validate(this.state.currentUser) }}>Save</button>
+                    <ExternalLink href={_urlNuovo} className="link"><button className="validateButton" onClick={() => { this.Validate(this.state.currentUser) }}>Deploy</button></ExternalLink> */}
                     <button className="downloadButton" onClick={() => { this.Download() }}>Download</button>
-                    <Link to="/cockpit" className="link" >
+                    {/* <Link to="/cockpit" className="link" >
                         <button className="validateButton" onClick={() => { }}>Cockpit</button>
-                    </Link>
+                    </Link> */}
                 </div>
             </div>
         )

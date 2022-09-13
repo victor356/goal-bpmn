@@ -15,7 +15,7 @@ function Intro() {
       showCursor: true,
       backDelay: 1500,
       backSpeed: 60,
-      strings: ['Design', 'Implement', 'Run']
+      strings: ['Design', 'consult your knowledge base', 'Save your jobs']
     })
   }, [])
 
@@ -33,7 +33,7 @@ function Intro() {
       <div className="right">
         <div className="wrapper">
           <h2>Web application</h2>
-          <h1>IoT-Aware BPMN platform</h1>
+          <h1>Goal oriented BPMN framework</h1>
           <h3>Allows to <span ref={textRef}></span></h3>
           
           <Link to="/bpmnModeler" >
