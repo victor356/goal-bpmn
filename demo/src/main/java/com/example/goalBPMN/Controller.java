@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.goalBPMN;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
