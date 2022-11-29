@@ -226,9 +226,9 @@ class BpmnModelerComponent extends Component {
 
     render = () => {
         return (
-            <div id="bpmncontainer" style={{ width: '100%', height: '100%' }} >
+            <div id="bpmncontainer" style={{ width: '100%', height: '100%', borderStyle: 'solid', borderWidth: '1px' }} >
                 <div id="propview" style={{ width: '25%', height: '100%', float: 'right', maxHeight: '100%', overflowX: 'auto' }}></div>
-                <div id="bpmnview" style={{ width: '75%', height: '100%', float: 'left' }}></div>
+                <div id="bpmnview" style={{ width: '75%', height: '100%', float: 'left', minHeight: "340px" }}></div>
                 <div className="modelerBPMN">
                     {/* <button className="downloadButton" onClick={() => { this.Validate(this.state.currentUser) }}>Save</button>
                     <ExternalLink href={_urlNuovo} className="link"><button className="validateButton" onClick={() => { this.Validate(this.state.currentUser) }}>Deploy</button></ExternalLink> */}

@@ -9,7 +9,7 @@ function TopBar({ menuOpen, setMenuOpen }) {
       <div className="wrapper">
         <div className="left">
           <Link to="/" className='logo'>
-            <span>Goal-Oriented BPMN</span>
+            <span>Web application</span>
           </Link>
 
           {/* <div className="itemContainer">

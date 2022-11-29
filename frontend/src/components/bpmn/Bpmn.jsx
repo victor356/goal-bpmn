@@ -6,6 +6,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from "react";
 import { getCurrentUser } from '../util/APIUtils';
 import { _url, _urlResources } from "../config";
+import Portfolio from '../portfolio/Portfolio.jsx';
 
 
 function Bpmn(props) {
@@ -53,6 +54,8 @@ function Bpmn(props) {
         <h1>Bpmn Modeler</h1>
         <div className="container">
           <BpmnModelerComponent xml={data} bpmnString={bpmnString} />
+          
+            
         </div>
       </div>
     );

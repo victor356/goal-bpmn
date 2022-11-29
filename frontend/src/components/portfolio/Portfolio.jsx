@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import axios from 'axios';
 import DeviceTable from '../deviceTable/DeviceTable.jsx';
+import "./portfolio.scss";
+
 
 class Portfolio extends React.Component {
   constructor(props) {
@@ -33,20 +35,28 @@ class Portfolio extends React.Component {
   render() {
     return (
 
-      <div className="bpmn" id="bpmn" >
-        <h1>Bpmn Modeler</h1>
-        <div className="container">
-          <form onSubmit={this.handleSubmit}>
-            <h1>
-              <label>
-                Insert query here:
-                <br />
-                <textarea value={this.state.value} onChange={this.handleChange} style={{ height: "30vh", width: "60vw" }} />
-              </label>
-            </h1>
-            <input type="submit" value="Submit" />
-          </form>
-        </div>
+      <div className="portfolio" >
+
+        <form onSubmit={this.handleSubmit} style={{ alignItems: "center", alignContent: "center", display: "contents" }}>
+          <h1>
+            <label>
+              Insert goal/task here:
+              <br />
+            
+              <input type="text" alignContent="center" value={this.state.value} onChange={this.handleChange} style={{
+                borderWidth: 1,
+                borderColor: "thistle",
+                borderRadius: 50,
+                width: "100%",
+                height: "3vh",
+                justifyContent: "center",
+                textAlign:"center"
+
+              }}  />
+                          </label>
+          </h1>
+          <input type="submit" value="Submit" />
+        </form>
         <DeviceTable />
 
       </div>

@@ -1,10 +1,18 @@
 @import "../../global.scss";
-
+.query{
+width:100%;
+align-items: center;
+}
 .bpmn{
     background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    align-items: center;
+    height: 100%;
+
 
     h1{
         font-size: 50px;
@@ -16,10 +24,10 @@
 
     .container{
         width: 100%;
-        height: 80%;
         display: flex;
+        flex-direction: column;
+
         align-items: center;
-        justify-content: center;
         margin: 50px;
 
         // border: 1px solid crimson;
@@ -35,11 +43,13 @@
 .modelerBPMN {
 
     display: flex;
-    align-items: flex-start;
+    align-items: column;
     justify-content: center;
     width: 100%;
-
-    .link{
+    height: 100%;
+    
+    
+        .link{
         // border: 1px solid black;
         position: relative;
         height: 40px;

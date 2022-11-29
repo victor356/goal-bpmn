@@ -8,10 +8,12 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
-import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css";
+import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
 import "./deviceTable.scss";
 import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
 import { render } from 'react-dom';
+import alignElements from 'diagram-js/lib/features/align-elements';
+import { alignProperty } from '@mui/material/styles/cssUtils';
 //import '../deviceTable.css';
 
 // class Portfolio extends React.Component {
@@ -147,6 +149,7 @@ function DeviceTable() {
     const [row, setRow] = useState([])
     const [col, setCol] = useState([])
     const [mapRow, setMap] = useState([])
+    const [json, setJson] = useState()
 
     useEffect(() => {
         axios.get("http://localhost:8080/getResults")
@@ -158,6 +161,7 @@ function DeviceTable() {
                 //      console.log("row", res.data.results.bindings);
                 //   setCol(res.data.head.vars)
                 setRow(res.data.results.bindings)
+
 
                 // setMap(res.data.head.vars.map(item => ({
                 //     id: item
@@ -173,7 +177,6 @@ function DeviceTable() {
 
             })
             .catch(err => console.log(err))
-
     }, [])
 
 
@@ -186,7 +189,8 @@ function DeviceTable() {
 
     const formatRows = () => {
         var words = []
-        for (var propName in row[0]) {
+        console.log(row)
+        for (let propName in row[0]) {
             words.push(propName)
         }
         return words;
@@ -244,7 +248,7 @@ function DeviceTable() {
 
                 {
                     Object.keys(item).map((key) => (
-                        (<Td style={{ textAlign: "center", borderColor: "black" }}>{fin(item[key]["value"])}</Td>)
+                        (<Td style={{ textAlign: "center", borderColor: "black",  borderBottom: '1px solid rgba(0, 0, 0, 0.5)',  }}>{fin(item[key]["value"])}</Td>)
 
                     ))}
 
@@ -286,10 +290,15 @@ if (typeof item[key] === 'object' && item[key] !== null) {
 
 
     return (
-        <div>
-            <h1>Lets see the posts</h1>
+        <div style={{  display: 'contents',
+        alignItems: 'center',
+        justifyContent: 'center',
+       
+        width:"100%"}}>
+            <h1>Results:</h1>
+            <br/>
 
-            <div style={{ height: 400, width: "100%", }}>
+            <div style={{  width: "50%", height: "100%", }}>
                 {/* <table>
 
                 <tr>
@@ -303,13 +312,13 @@ if (typeof item[key] === 'object' && item[key] !== null) {
                 </tr>
                     )}
                </table> */}
-                <Table >
+                <Table>
                     <Thead>
-                        <Tr style={{ border: '10px solid rgba(0, 0, 0, 0.05)', }}>
+                        <Tr >
                             {renderHead()}
                         </Tr>
                     </Thead>
-                    <Tbody>
+                    <Tbody  >
 
 
 

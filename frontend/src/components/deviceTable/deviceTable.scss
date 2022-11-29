@@ -1,10 +1,11 @@
 /* inspired by: https://css-tricks.com/responsive-data-tables/ */
 .responsiveTable {
   width: 100%;
+  padding:5%;
+  border: 2px solid #000;
 }
 
 .responsiveTable td .tdBefore {
-  display: none;
 }
 
 @media screen and (max-width: 40em) {
@@ -19,13 +20,12 @@
   .responsiveTable th,
   .responsiveTable td,
   .responsiveTable tr {
-    display: block;
+
+    padding:100px;
   }
 
   .responsiveTable thead tr {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
+    
     border-bottom: 2px solid #333;
   }
 

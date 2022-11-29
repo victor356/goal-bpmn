@@ -37,6 +37,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+
 @RestController
 
 public class Controller {
@@ -44,7 +45,7 @@ public class Controller {
     @GetMapping("/")
     public String hello() {
 
-        Dataset ds = TDBFactory.createDataset(System.getProperty("user.dir") + "/goal.owl");
+        Dataset ds = TDBFactory.createDataset(System.getProperty("user.dir") + "/edited.owl");
         ;
 
         FusekiServer server = FusekiServer.create()
@@ -73,14 +74,37 @@ public class Controller {
     }
 
     @PostMapping("/query")
-    public String receiveQuery(@RequestBody String query)
+    public String receiveQuery(@RequestBody String input)
             throws UnsupportedEncodingException, FileNotFoundException {
+                input = input.substring(0, input.length() - 1);
 
-        query = query.substring(0, query.length() - 1);
+                String query = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> "+
+                "PREFIX owl: <http://www.w3.org/2002/07/owl#> "+
+                "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> "+
+                "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> "+
+                "PREFIX base: <http://dev.nemo.inf.ufes.br/seon/SEON.owl#> "+
+                "PREFIX iot: <http://purl.oclc.org/NET/UNIS/fiware/iot-lite#> "+
+                "PREFIX home: <http://www.co-ode.org/ontologies/ont.owl#> "+
+                "PREFIX lite: <http://purl.oclc.org/NET/ssnx/ssn#> "+
+                "PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> "+
+                
+                
+                
+                
+                
+               "SELECT DISTINCT  ?tasks ?devices WHERE "+
+              "{{base:"+input+" base:isRealizedBy ?devices .} "+
+                  "UNION "+
+                
+                
+                "{?tasks base:isRealizedBy ?devices "+
+                "{SELECT ?tasks WHERE "+
+               "{?tasks base:isSubGoalOf base:"+input+" .}}}} ORDER BY DESC(?tasks)";
+               
         String result = java.net.URLDecoder.decode(query, StandardCharsets.UTF_8.name());
         OntModel m = getModel();
         loadData(m);
-        return showQuery(m, result);
+        return showQuery(m, query);
 
     }
 
@@ -90,7 +114,7 @@ public class Controller {
     // FileManager.getInternal().addLocatorClassLoader(Main.class.getClassLoader());
 
     // FileManager.getInternal().loadModelInternal(System.getProperty("user.dir") +
-    // "/goal.owl");
+    // "/edited.owl");
     // // String path ="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#";
     // String path = "https://dev.nemo.inf.ufes.br/seon/SEON.owl";
     // Model model = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
@@ -147,7 +171,7 @@ public class Controller {
     }
 
     protected void loadData(Model m) {
-        RDFDataMgr.read(m, SOURCE + "goal.owl");
+        RDFDataMgr.read(m, SOURCE + "edited.owl");
     }
 
     private static void materialize(QuerySolution qs) {
@@ -268,8 +292,8 @@ public class Controller {
     // // Model model =
     // // FileManager.getInternal().loadModelInternal(System.getProperty("user.dir")
     // +
-    // // "/goal.owl");
-    // String path =System.getProperty("user.dir") + "/goal.owl";
+    // // "/edited.owl");
+    // String path =System.getProperty("user.dir") + "/edited.owl";
     // Model model = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
     // model.read(path);
     // model.write(System.out);

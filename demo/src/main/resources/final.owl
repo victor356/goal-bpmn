@@ -1,0 +1,1077 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://dev.nemo.inf.ufes.br/seon/SEON.owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://dev.nemo.inf.ufes.br/seon/SEON.owl#">
+    <Prefix name="" IRI="http://dev.nemo.inf.ufes.br/seon/SEON.owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="SEON" IRI="dev.nemo.inf.ufes.br/seon/SEON.owl#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="SEON1" IRI="http://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#"/>
+    <Prefix name="SEON2" IRI="http://dev.nemo.inf.ufes.br/seon/SEON.owl#"/>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/bibliographicCitation"/>
+        <Literal xml:lang="en">Maria Bermudez-Edo, Tarek Elsaleh, Payam Barnaghi and Kerry Taylor, &quot;IoT-Lite: A Lightweight Semantic Model for the Internet of Things&quot;, in Proc. of the IEEE Conferences on Ubiquitous Intelligence &amp; Computing, July 2016, Toulouse, France.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/bibliographicCitation"/>
+        <Literal xml:lang="en">Maria Bermudez-Edo, Tarek Elsaleh, Payam Barnaghi and Kerry Taylor, &quot;IoT-Lite: a lightweight semantic model for the internet of things and its use with dynamic semantics&quot;, Personal and Ubiquitous Computing (2017).</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/contributor"/>
+        <Literal xml:lang="en">This work is part of the EU FP7 FIWARE project and the EU H2020 FIESTA-IoT project at the Institution for Communication Systems University of Surrey.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <Literal xml:lang="en">Kerry Taylor</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <Literal xml:lang="en">Maria Bermudez-Edo</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <Literal xml:lang="en">Payam Barnaghi</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <Literal xml:lang="en">Tarek Elsaleh</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <Literal xml:lang="en">2017-04-11</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <Literal xml:lang="en">This ontology describes IoT concepts into three classes. Objects, system or resources and services. The devices are also splitted into, although not restricted to, three classes: sensing devices actuating devices and tag devices. The services are described with an availability or access control and a coverage. This coverage represents the area covered by the IoT device. The figure below depicts the concepts of the ontology and the main relationships between them.
+IoT Lite Ontology is created to be used with a common taxonomy to describe the Units and QuantityKind that IoT devices can meassure. This taxonomy represent individuals in the ontology and is based in well-known taxonomies as: qu and qudt.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/rights"/>
+        <Literal xml:lang="en">This ontology is distributed under a Creative Commons Attribution 3.0 Unported License - http://creativecommons.org/licenses/by/3.0/. This copyright applies to the iot-lite ontology specification and RDF.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <Literal xml:lang="en">IoT-Lite Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en">The IoT lite Ontology is a lightweight ontology to represent Internet of Things resources, entities and services. The lightweight allow the representation and use of IoT platforms without consuming excessive processing time when querying the ontology. However it is also a meta ontology that can be extended in order to represent IoT concepts in a more detail way in different domains.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal>Working Draft</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal xml:lang="en">0.4</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="Atomic_Task"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Complex_Task"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Hardgoal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Requirement"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Softgoal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Task"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#ActuatingDevice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Attribute"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Circle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Coverage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Entity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Metadata"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Object"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Polygon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Rectangle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Service"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#TagDevice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#VirtualEntity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.oclc.org/NET/ssnx/ssn#Device"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.oclc.org/NET/ssnx/ssn#Platform"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.oclc.org/NET/ssnx/ssn#System"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/NET/ssnx/qu/qu#Unit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isRealizedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isSubGoalOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI=".Requirement+Requirement"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="composed_of.Complex_Task+Task"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="intends_to_operationalize.Task+Requirement"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#exposedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#exposes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasAttribute"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasCoverage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasMetadata"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasQuantityKind"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasSensingDevice"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasUnit"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#isAssociatedWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#isSubSystemOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/ssnx/ssn#hasSubSystem"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/ssnx/ssn#onPlatform"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#endpoint"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#id"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#interfaceDescription"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#interfaceType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#isMobile"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#isOnline"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#metadataType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#metadataValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#radius"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Air_conditioning"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="CO2_sensor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Ceiling_fan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Hoven"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Information_system"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Portable_fan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="Ventilation_system"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="energy_efficient"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="increase_ventilation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="meeting_room"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="performance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="read_co2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="stop_ventilation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="ventilate"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="dev.nemo.inf.ufes.br/seon/SEON.owl#ontology"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#altRelative"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#relativeLocation"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/bibliographicCitation"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/contributor"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/dateSubmitted"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/rights"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#alt"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#lat"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#long"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Entity"/>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Object"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="Atomic_Task"/>
+        <Class IRI="Task"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Complex_Task"/>
+        <Class IRI="Task"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Hardgoal"/>
+        <Class IRI="Softgoal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Task"/>
+        <Class IRI="Hardgoal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#ActuatingDevice"/>
+        <Class IRI="http://purl.oclc.org/NET/ssnx/ssn#Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Circle"/>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Coverage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Polygon"/>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Coverage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Rectangle"/>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Coverage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#TagDevice"/>
+        <Class IRI="http://purl.oclc.org/NET/ssnx/ssn#Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#VirtualEntity"/>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.oclc.org/NET/ssnx/ssn#Device"/>
+        <Class IRI="http://purl.oclc.org/NET/ssnx/ssn#System"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+        <Class IRI="http://purl.oclc.org/NET/ssnx/ssn#Device"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+        <Class IRI="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#ActuatingDevice"/>
+        <NamedIndividual IRI="Air_conditioning"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+        <NamedIndividual IRI="CO2_sensor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#ActuatingDevice"/>
+        <NamedIndividual IRI="Ceiling_fan"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://purl.oclc.org/NET/ssnx/ssn#Device"/>
+        <NamedIndividual IRI="Hoven"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://purl.oclc.org/NET/ssnx/ssn#System"/>
+        <NamedIndividual IRI="Information_system"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#ActuatingDevice"/>
+        <NamedIndividual IRI="Portable_fan"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://purl.oclc.org/NET/ssnx/ssn#System"/>
+        <NamedIndividual IRI="Ventilation_system"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Softgoal"/>
+        <NamedIndividual IRI="energy_efficient"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Atomic_Task"/>
+        <NamedIndividual IRI="increase_ventilation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+        <NamedIndividual IRI="meeting_room"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Softgoal"/>
+        <NamedIndividual IRI="performance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Hardgoal"/>
+        <NamedIndividual IRI="read_co2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Atomic_Task"/>
+        <NamedIndividual IRI="stop_ventilation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="Hardgoal"/>
+        <NamedIndividual IRI="ventilate"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
+        <NamedIndividual IRI="Air_conditioning"/>
+        <NamedIndividual IRI="meeting_room"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="isRealizedBy"/>
+        <NamedIndividual IRI="energy_efficient"/>
+        <NamedIndividual IRI="Ceiling_fan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="isRealizedBy"/>
+        <NamedIndividual IRI="increase_ventilation"/>
+        <NamedIndividual IRI="Ceiling_fan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="isRealizedBy"/>
+        <NamedIndividual IRI="increase_ventilation"/>
+        <NamedIndividual IRI="Hoven"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="isRealizedBy"/>
+        <NamedIndividual IRI="increase_ventilation"/>
+        <NamedIndividual IRI="Portable_fan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="isRealizedBy"/>
+        <NamedIndividual IRI="increase_ventilation"/>
+        <NamedIndividual IRI="Ventilation_system"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="isSubGoalOf"/>
+        <NamedIndividual IRI="increase_ventilation"/>
+        <NamedIndividual IRI="ventilate"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="isRealizedBy"/>
+        <NamedIndividual IRI="performance"/>
+        <NamedIndividual IRI="Air_conditioning"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="isRealizedBy"/>
+        <NamedIndividual IRI="read_co2"/>
+        <NamedIndividual IRI="CO2_sensor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="isRealizedBy"/>
+        <NamedIndividual IRI="stop_ventilation"/>
+        <NamedIndividual IRI="Ceiling_fan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="isRealizedBy"/>
+        <NamedIndividual IRI="stop_ventilation"/>
+        <NamedIndividual IRI="Portable_fan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="isRealizedBy"/>
+        <NamedIndividual IRI="stop_ventilation"/>
+        <NamedIndividual IRI="Ventilation_system"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="isSubGoalOf"/>
+        <NamedIndividual IRI="stop_ventilation"/>
+        <NamedIndividual IRI="ventilate"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="isRealizedBy"/>
+        <NamedIndividual IRI="ventilate"/>
+        <NamedIndividual IRI="Ceiling_fan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="isRealizedBy"/>
+        <NamedIndividual IRI="ventilate"/>
+        <NamedIndividual IRI="Portable_fan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="isRealizedBy"/>
+        <NamedIndividual IRI="ventilate"/>
+        <NamedIndividual IRI="Ventilation_system"/>
+    </ObjectPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="isSubGoalOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#exposedBy"/>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#exposes"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#isSubSystemOf"/>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/ssnx/ssn#hasSubSystem"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isRealizedBy"/>
+        <Class IRI="Hardgoal"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isRealizedBy"/>
+        <Class IRI="Requirement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isRealizedBy"/>
+        <Class IRI="Softgoal"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isSubGoalOf"/>
+        <Class IRI="Hardgoal"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isSubGoalOf"/>
+        <Class IRI="Task"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI=".Requirement+Requirement"/>
+        <Class IRI="Requirement"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="composed_of.Complex_Task+Task"/>
+        <Class IRI="Complex_Task"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="intends_to_operationalize.Task+Requirement"/>
+        <Class IRI="Task"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#exposedBy"/>
+        <Class IRI="http://purl.oclc.org/NET/ssnx/ssn#Device"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#exposes"/>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Service"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasAttribute"/>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Entity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasAttribute"/>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Object"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasCoverage"/>
+        <Class IRI="http://purl.oclc.org/NET/ssnx/ssn#Device"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasQuantityKind"/>
+        <ObjectUnionOf>
+            <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Attribute"/>
+            <Class IRI="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasSensingDevice"/>
+        <Class IRI="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasUnit"/>
+        <Class IRI="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#isAssociatedWith"/>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Entity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#isAssociatedWith"/>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Object"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#isSubSystemOf"/>
+        <Class IRI="http://purl.oclc.org/NET/ssnx/ssn#System"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/ssnx/ssn#hasSubSystem"/>
+        <Class IRI="http://purl.oclc.org/NET/ssnx/ssn#System"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/ssnx/ssn#onPlatform"/>
+        <Class IRI="http://purl.oclc.org/NET/ssnx/ssn#System"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
+        <Class IRI="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
+        <Class IRI="http://purl.oclc.org/NET/ssnx/ssn#System"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isRealizedBy"/>
+        <Class IRI="http://purl.oclc.org/NET/ssnx/ssn#Sensor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isRealizedBy"/>
+        <Class IRI="http://purl.oclc.org/NET/ssnx/ssn#System"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isSubGoalOf"/>
+        <Class IRI="Complex_Task"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isSubGoalOf"/>
+        <Class IRI="Hardgoal"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isSubGoalOf"/>
+        <Class IRI="Softgoal"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isSubGoalOf"/>
+        <Class IRI="Task"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI=".Requirement+Requirement"/>
+        <Class IRI="Requirement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="composed_of.Complex_Task+Task"/>
+        <Class IRI="Task"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="intends_to_operationalize.Task+Requirement"/>
+        <Class IRI="Requirement"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#exposedBy"/>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Service"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#exposes"/>
+        <Class IRI="http://purl.oclc.org/NET/ssnx/ssn#Device"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasAttribute"/>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Attribute"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasCoverage"/>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Coverage"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasMetadata"/>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Metadata"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasQuantityKind"/>
+        <Class IRI="http://purl.org/NET/ssnx/qu/qu#QuantityKind"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasSensingDevice"/>
+        <Class IRI="http://purl.oclc.org/NET/ssnx/ssn#SensingDevice"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasUnit"/>
+        <Class IRI="http://purl.org/NET/ssnx/qu/qu#Unit"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#isAssociatedWith"/>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Service"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#isSubSystemOf"/>
+        <Class IRI="http://purl.oclc.org/NET/ssnx/ssn#System"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/ssnx/ssn#hasSubSystem"/>
+        <Class IRI="http://purl.oclc.org/NET/ssnx/ssn#System"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://purl.oclc.org/NET/ssnx/ssn#onPlatform"/>
+        <Class IRI="http://purl.oclc.org/NET/ssnx/ssn#Platform"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#location"/>
+        <Class IRI="http://www.w3.org/2003/01/geo/wgs84_pos#Point"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#endpoint"/>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Service"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#id"/>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Entity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#id"/>
+        <Class IRI="http://purl.oclc.org/NET/ssnx/ssn#Device"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#interfaceDescription"/>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Service"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#interfaceType"/>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Service"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#isMobile"/>
+        <Class IRI="http://purl.oclc.org/NET/ssnx/ssn#Platform"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#isOnline"/>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Service"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#metadataType"/>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Metadata"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#metadataValue"/>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Metadata"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#radius"/>
+        <Class IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Circle"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#endpoint"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#id"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#interfaceDescription"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#interfaceType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#isMobile"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#isOnline"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#metadataType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#metadataValue"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#radius"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="dev.nemo.inf.ufes.br/seon/SEON.owl#ontology"/>
+        <IRI>Atomic_Task</IRI>
+        <Literal>GORO</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Atomic_Task</IRI>
+        <Literal>An Atomic Task is a Task that is not decomposed in other tasks.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="dev.nemo.inf.ufes.br/seon/SEON.owl#ontology"/>
+        <IRI>Complex_Task</IRI>
+        <Literal>GORO</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Complex_Task</IRI>
+        <Literal>A Complex Task is a Task that is composed in other tasks.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="dev.nemo.inf.ufes.br/seon/SEON.owl#ontology"/>
+        <IRI>Hardgoal</IRI>
+        <Literal>GORO</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Hardgoal</IRI>
+        <Literal>Hardgoal is a proposition that is objectively satisfied by a given set of situations.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="dev.nemo.inf.ufes.br/seon/SEON.owl#ontology"/>
+        <IRI>Requirement</IRI>
+        <Literal>GORO</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Requirement</IRI>
+        <Literal>A Goal in the scope of a specific problem, that describes environmental conditions to be achieved through a desired solution resulting in satisfaction of the underlying strategic goals. In GORE, these goals can be refined by decomposing them into sub-goals, as well as by defining them by means of alternative goals.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="dev.nemo.inf.ufes.br/seon/SEON.owl#ontology"/>
+        <IRI>Softgoal</IRI>
+        <Literal>GORO</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Softgoal</IRI>
+        <Literal>Softgoal is an initial and temporary vague expression of a goal not suficiently defined yet. It refers to a vague quality region whose exact boundaries are unknown. Thus it is not possible to determine a priori the set of situations that satisfies the softgoal. Its satisfiability is usually related to an agent&apos;s judgement.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="dev.nemo.inf.ufes.br/seon/SEON.owl#ontology"/>
+        <IRI>Task</IRI>
+        <Literal>GORO</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>Task</IRI>
+        <Literal>A Task is a plan to achieve a goal.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.oclc.org/NET/UNIS/fiware/iot-lite#ActuatingDevice</IRI>
+        <Literal xml:lang="en">Device that can actuate over an object or QuantityKind.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Attribute</IRI>
+        <Literal xml:lang="en">An attribute of an IoT object that can be exposed by an IoT service (i.e. a room (IoT Object) has a temperature (Attribute), that can be exposed by a temperature sensor (IoT device).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Circle</IRI>
+        <Literal xml:lang="en">Circle coverage it needs the location of the sensor as the centre of the circle and the radius as a DataProperty.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Coverage</IRI>
+        <Literal xml:lang="en">The coverage of an IoT device (i.e. a temperature sensor inside a room has a coverage of that room).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Entity</IRI>
+        <Literal xml:lang="en">Any object that is relevant from a user or application perspective. 
+(IoT-A Definition)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Metadata</IRI>
+        <Literal xml:lang="en">Class used to describe properties that cannot be described by QuantityKind and Units. i.e. the resolution of a sensor.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Object</IRI>
+        <Literal xml:lang="en">IoT entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Polygon</IRI>
+        <Literal xml:lang="en">The coverage is made up by linking several points by strait lines.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Rectangle</IRI>
+        <Literal xml:lang="en">The coverage is made up by giving two points which are the opposite corners of a rectangle.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.oclc.org/NET/UNIS/fiware/iot-lite#Service</IRI>
+        <Literal xml:lang="en">Service provided by an IoT Device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.oclc.org/NET/UNIS/fiware/iot-lite#TagDevice</IRI>
+        <Literal xml:lang="en">Tag Device such as QR code or bar code.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.oclc.org/NET/UNIS/fiware/iot-lite#VirtualEntity</IRI>
+        <Literal>Computational or data element representing a Physical Entity. Virtual Entities can be either Active or Passive Digital Entities.
+
+Physical Entities are represented in the digital world by a Virtual Entity. This
+term is also referred to as “virtual counterpart” in the literature (Ro¨mer et al. 2002),
+but using the same root term “entity” in both concepts clearer shows the relationship
+of these concepts. There are many kinds of digital representations of Physical
+Entities: 3D models, avatars, database entries, objects (or instances of a class in an
+object-oriented programming language), and even a social-network account could
+be viewed as such a representation, because it digitally represents certain aspects of
+its human owner, such as a photograph or a list of his hobbies.
+
+Enabling Things to Talk: Designing IoT solutions with the IoT Architectural Reference Model, Alessandro Bassi, Martin Bauer, Martin Fiedler, Thorsten Kramp,
+Rob van Kranenburg, Sebastian Lange, Stefan Meissner</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.oclc.org/NET/UNIS/fiware/iot-lite#altRelative</IRI>
+        <Literal xml:lang="en">Relative Altitude can be used in place of an absolute altitude, especially in buildings, where it makes more sense to locate by levels or floors. For example the value &quot;0&quot; would indicate &quot;ground floor&quot;, and &quot;1&quot; would indicate &quot;1st floor&quot; and so on.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.oclc.org/NET/UNIS/fiware/iot-lite#endpoint</IRI>
+        <Literal>Endpoint of the service. It is usually a URL where the service is available.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.oclc.org/NET/UNIS/fiware/iot-lite#exposedBy</IRI>
+        <Literal>A device is exposed by a service.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.oclc.org/NET/UNIS/fiware/iot-lite#exposes</IRI>
+        <Literal>For service-oriented queries. The inverse of exposedBy.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasAttribute</IRI>
+        <Literal>Links the devices with their attributes.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasCoverage</IRI>
+        <Literal>Links the devices with their coverages.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasMetadata</IRI>
+        <Literal>Links any concept with metadata about that concept.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasQuantityKind</IRI>
+        <Literal>Links a sensor or an attribute with the quantity  kind it measures (e.g. A sensor -sensor1- measures temperature: sensor1 hasQuantityKind temperature).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasSensingDevice</IRI>
+        <Literal>Links a sensor with a sensing device the same way as SSN.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.oclc.org/NET/UNIS/fiware/iot-lite#hasUnit</IRI>
+        <Literal>Links the sensor with the units of the quantity kind it measures (e.g. A sensor -sensor1- measures temperature in Celsius: senso1 hasUnit celsius).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.oclc.org/NET/UNIS/fiware/iot-lite#id</IRI>
+        <Literal xml:lang="en">The ID of the Device or Entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.oclc.org/NET/UNIS/fiware/iot-lite#interfaceDescription</IRI>
+        <Literal>Interface Description of the service, e.g WADL, WSDL, NGSI9 etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.oclc.org/NET/UNIS/fiware/iot-lite#interfaceType</IRI>
+        <Literal xml:lang="en">Defines the type of interface of the service endpoint, e.g. RESTful, NGSI-9, MQTT, CoAP etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.oclc.org/NET/UNIS/fiware/iot-lite#isAssociatedWith</IRI>
+        <Literal xml:lang="en">Defines the associations between objects and sensors (e.g. A table (object) has an attribute (temperature at the table) which is associated with a sensor (the temperature sensor of the room).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.oclc.org/NET/UNIS/fiware/iot-lite#isMobile</IRI>
+        <Literal xml:lang="en">Is the Device mobile? This can be used by an IoT management platform to enable tracking of the device&apos;s location.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.oclc.org/NET/UNIS/fiware/iot-lite#isOnline</IRI>
+        <Literal xml:lang="en">Is the IoT Service exposing the Resource, or associated with the Entity, online?</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.oclc.org/NET/UNIS/fiware/iot-lite#isSubSystemOf</IRI>
+        <Literal xml:lang="en">This defines that a devices system is a subsystem of another system. For example, a multi-sensor device is a subsystem of a smart building testbed. This is the inverse of the SSN object property &quot;hasSubSystem&quot;. It allows a graph to start from a subsystem. This is useful for resource-centric graphs.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.oclc.org/NET/UNIS/fiware/iot-lite#metadataType</IRI>
+        <Literal xml:lang="en">Defines the type pf the metadata value (e.g. resolution of the sensor).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.oclc.org/NET/UNIS/fiware/iot-lite#metadataValue</IRI>
+        <Literal xml:lang="en">Value of the metadata</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.oclc.org/NET/UNIS/fiware/iot-lite#radius</IRI>
+        <Literal xml:lang="en">Specifies the radius of a circle coverage defined by a point -the center of the circle- and its radius.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://purl.oclc.org/NET/UNIS/fiware/iot-lite#relativeLocation</IRI>
+        <Literal xml:lang="en">Relative Location is used to provide a place for where the Device is in. For example, Geonames URIs can be used to represent a place, city, area, or region. For &quot;University of Surrey&quot; this would be &quot;http://sws.geonames.org/6695971/&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#altRelative"/>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#Point</IRI>
+        <Literal></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#relativeLocation"/>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#Point</IRI>
+        <Literal></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#alt"/>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#Point</IRI>
+        <Literal></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#lat"/>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#Point</IRI>
+        <Literal></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#long"/>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#Point</IRI>
+        <Literal></Literal>
+    </AnnotationAssertion>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#altRelative"/>
+        <AbbreviatedIRI>xsd:string</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyRange>
+        <AnnotationProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#relativeLocation"/>
+        <AbbreviatedIRI>xsd:string</AbbreviatedIRI>
+    </AnnotationPropertyRange>
+    <AnnotationPropertyDomain>
+        <AnnotationProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#altRelative"/>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#Point</IRI>
+    </AnnotationPropertyDomain>
+    <AnnotationPropertyDomain>
+        <AnnotationProperty IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#relativeLocation"/>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#Point</IRI>
+    </AnnotationPropertyDomain>
+    <AnnotationPropertyDomain>
+        <AnnotationProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#alt"/>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#Point</IRI>
+    </AnnotationPropertyDomain>
+    <AnnotationPropertyDomain>
+        <AnnotationProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#lat"/>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#Point</IRI>
+    </AnnotationPropertyDomain>
+    <AnnotationPropertyDomain>
+        <AnnotationProperty IRI="http://www.w3.org/2003/01/geo/wgs84_pos#long"/>
+        <IRI>http://www.w3.org/2003/01/geo/wgs84_pos#Point</IRI>
+    </AnnotationPropertyDomain>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
