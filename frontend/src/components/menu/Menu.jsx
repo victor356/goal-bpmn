@@ -15,9 +15,9 @@ function Menu({ menuOpen, setMenuOpen }) {
                 {/* <Link to="/profile" style={{ color: '#fff', textDecoration: 'none' }}>
                     <li onClick={() => setMenuOpen(false)}>Profile</li>
                 </Link> */}
-                <Link to="/portfolio" style={{ color: '#fff', textDecoration: 'none' }}>
+                {/* <Link to="/portfolio" style={{ color: '#fff', textDecoration: 'none' }}>
                     <li onClick={() => setMenuOpen(false)}>IoT Devices</li>
-                </Link>
+                </Link> */}
                 {/* <Link to="/works" style={{ color: '#fff', textDecoration: 'none' }}>
                     <li onClick={() => setMenuOpen(false)}>Technologies</li>
                 </Link> */}

@@ -142,7 +142,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Intro />} />
             {/* <Route path="/profile" element={<Profile />} /> */}
-            <Route path="/portfolio" element={<Portfolio />} />
+            {/* <Route path="/portfolio" element={<Portfolio />} /> */}
             {/* <Route path="/works" element={<Works />} /> */}
             {/* <Route path="/bpmn/:d" element={<Bpmn />} /> */}
             <Route path="/bpmnModeler" element={<BpmnModeler />} />

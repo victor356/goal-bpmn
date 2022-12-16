@@ -708,7 +708,7 @@ Rob van Kranenburg, Sebastian Lange, Stefan Meissner</rdfs:comment>
 	<isRealizedBy rdf:resource="http://dev.nemo.inf.ufes.br/seon/SEON.owl#Ceiling_fan"/>
 	<isRealizedBy rdf:resource="http://dev.nemo.inf.ufes.br/seon/SEON.owl#Portable_fan"/>
 	<isRealizedBy rdf:resource="http://dev.nemo.inf.ufes.br/seon/SEON.owl#Ventilation_system"/>
-	<isSubGoalOf rdf:resource="http://dev.nemo.inf.ufes.br/seon/SEON.owl#ventilate"/>
+	<isSubGoalOf rdf:resource="http://dev.nemo.inf.ufes.br/seon/SEON.owl#ventilate_environment"/>
 </rdf:Description>
 <!--  -->
 <!-- http://dev.nemo.inf.ufes.br/seon/SEON.owl#meeting_room -->
@@ -742,7 +742,7 @@ Rob van Kranenburg, Sebastian Lange, Stefan Meissner</rdfs:comment>
 	<isRealizedBy rdf:resource="http://dev.nemo.inf.ufes.br/seon/SEON.owl#Air_conditioning"/>
 	<isRealizedBy rdf:resource="http://dev.nemo.inf.ufes.br/seon/SEON.owl#Ceiling_fan"/>
 	<isRealizedBy rdf:resource="http://dev.nemo.inf.ufes.br/seon/SEON.owl#Portable_fan"/>
-	<isSubGoalOf rdf:resource="http://dev.nemo.inf.ufes.br/seon/SEON.owl#ventilate"/>
+	<isSubGoalOf rdf:resource="http://dev.nemo.inf.ufes.br/seon/SEON.owl#ventilate_environment"/>
 </rdf:Description>
 <!--  -->
 <!-- http://dev.nemo.inf.ufes.br/seon/SEON.owl#stop_ventilation -->
@@ -753,12 +753,12 @@ Rob van Kranenburg, Sebastian Lange, Stefan Meissner</rdfs:comment>
 	<isRealizedBy rdf:resource="http://dev.nemo.inf.ufes.br/seon/SEON.owl#Ceiling_fan"/>
 	<isRealizedBy rdf:resource="http://dev.nemo.inf.ufes.br/seon/SEON.owl#Portable_fan"/>
 	<isRealizedBy rdf:resource="http://dev.nemo.inf.ufes.br/seon/SEON.owl#Ventilation_system"/>
-	<isSubGoalOf rdf:resource="http://dev.nemo.inf.ufes.br/seon/SEON.owl#ventilate"/>
+	<isSubGoalOf rdf:resource="http://dev.nemo.inf.ufes.br/seon/SEON.owl#ventilate_environment"/>
 </rdf:Description>
 <!--  -->
-<!-- http://dev.nemo.inf.ufes.br/seon/SEON.owl#ventilate -->
+<!-- http://dev.nemo.inf.ufes.br/seon/SEON.owl#ventilate_environment -->
 
-<rdf:Description rdf:about="http://dev.nemo.inf.ufes.br/seon/SEON.owl#ventilate">
+<rdf:Description rdf:about="http://dev.nemo.inf.ufes.br/seon/SEON.owl#ventilate_environment">
 	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
 	<rdf:type rdf:resource="http://dev.nemo.inf.ufes.br/seon/SEON.owl#Hardgoal"/>
 	<isRealizedBy rdf:resource="http://dev.nemo.inf.ufes.br/seon/SEON.owl#Ceiling_fan"/>

@@ -101,77 +101,44 @@ public class Controller {
                 "{SELECT ?tasks WHERE "+
                "{?tasks base:isSubGoalOf base:"+input+" .}}}} ORDER BY DESC(?tasks)";
                
-        String result = java.net.URLDecoder.decode(query, StandardCharsets.UTF_8.name());
+      //  String result = java.net.URLDecoder.decode(query, StandardCharsets.UTF_8.name());
         OntModel m = getModel();
         loadData(m);
         return showQuery(m, query);
 
     }
 
-    // @GetMapping("/query")
-    // public String test() {
+    @GetMapping("/getResults")
+    public Object getResults() throws IOException, ParseException {
 
-    // FileManager.getInternal().addLocatorClassLoader(Main.class.getClassLoader());
+        
+          //JSON parser object to parse read file
+          JSONParser jsonParser = new JSONParser();
+         
+         FileReader reader = new FileReader(SOURCE+file);
+          
+              //Read JSON file
+              Object  obj = jsonParser.parse(reader);
+            //  JSONArray employeeList = (JSONArray) obj;
+            
 
-    // FileManager.getInternal().loadModelInternal(System.getProperty("user.dir") +
-    // "/edited.owl");
-    // // String path ="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#";
-    // String path = "https://dev.nemo.inf.ufes.br/seon/SEON.owl";
-    // Model model = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
-    // model.read(path);
-    // model.write(System.out);
-    // String queryString = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> "
-    // +
+              return obj;
+   
 
-    // "SELECT ?subject ?object " +
-    // "WHERE { ?subject rdfs:subClassOf ?object } . ";
-
-    // Query query = QueryFactory.create(queryString);
-    // QueryExecution qexec = QueryExecutionFactory.create(query, model);
-    // try {
-    // ResultSet results = qexec.execSelect();
-    // while (results.hasNext()) {
-    // QuerySolution soln = results.nextSolution();
-    // Literal name = soln.getLiteral("subject");
-    // System.out.println(name);
-    // }
-    // } finally {
-    // qexec.close();
-    // }
-
-    // return "Query done";
-    // }
+    }
 
     public static final String SOURCE = "./demo/src/main/resources/";
+    private static final String file="queryResults.json";
+    private static final String ontology="edited.owl";
 
-    @GetMapping("/sparql")
-    public void run() throws FileNotFoundException {
-        OntModel m = getModel();
-        loadData(m);
-        String prefix = "prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n" +
-                "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>" +
-                "PREFIX owl: <http://www.w3.org/2002/07/owl#>" +
-                "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>" +
-                "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>" +
-                "PREFIX base: <https://dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/dev.nemo.inf.ufes.br/seon/SEON.owl#>";
-
-        showQuery(m,
-                prefix +
-                // "SELECT * WHERE {base:lightsOn base:isRealizedBy ?devices . ?devices base:id
-                // ?id . ?devices base:consumption ?consumption . ?devices base:isLocatedAt
-                // base:lab01 . }"
-
-                        "SELECT DISTINCT ?devices ?id ?consume  WHERE {base:increaseTemperature base:isRealizedBy ?devices . ?devices base:id ?id . ?devices base:consumption ?consume . }"
-
-        );
-    }
+  
 
     protected OntModel getModel() {
         return ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM);
     }
 
     protected void loadData(Model m) {
-        RDFDataMgr.read(m, SOURCE + "edited.owl");
+        RDFDataMgr.read(m, SOURCE + ontology);
     }
 
     private static void materialize(QuerySolution qs) {
@@ -225,7 +192,7 @@ public class Controller {
         QueryExecution qexec = QueryExecutionFactory.create(query, m);
         ResultSet results = qexec.execSelect();
 
-        final OutputStream os = new FileOutputStream(SOURCE + "queryResults.json");
+        final OutputStream os = new FileOutputStream(SOURCE + file );
         // final PrintStream printStream = new PrintStream(os);
 
         // ObjectOutputStream objOut = new ObjectOutputStream(fileOut);
@@ -266,24 +233,7 @@ public class Controller {
 
     }
 
-    @GetMapping("/getResults")
-    public Object getResults() throws IOException, ParseException {
-
-        
-          //JSON parser object to parse read file
-          JSONParser jsonParser = new JSONParser();
-         
-         FileReader reader = new FileReader(SOURCE+"queryResults.json");
-          
-              //Read JSON file
-              Object  obj = jsonParser.parse(reader);
-            //  JSONArray employeeList = (JSONArray) obj;
-            
-
-              return obj;
-   
-
-    }
+    
 
     // @GetMapping("/query")
     // public String test() {
@@ -321,3 +271,36 @@ public class Controller {
     // return "Query done";
     // }
 }
+// @GetMapping("/query")
+    // public String test() {
+
+    // FileManager.getInternal().addLocatorClassLoader(Main.class.getClassLoader());
+
+    // FileManager.getInternal().loadModelInternal(System.getProperty("user.dir") +
+    // "/edited.owl");
+    // // String path ="http://purl.oclc.org/NET/UNIS/fiware/iot-lite#";
+    // String path = "https://dev.nemo.inf.ufes.br/seon/SEON.owl";
+    // Model model = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
+    // model.read(path);
+    // model.write(System.out);
+    // String queryString = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> "
+    // +
+
+    // "SELECT ?subject ?object " +
+    // "WHERE { ?subject rdfs:subClassOf ?object } . ";
+
+    // Query query = QueryFactory.create(queryString);
+    // QueryExecution qexec = QueryExecutionFactory.create(query, model);
+    // try {
+    // ResultSet results = qexec.execSelect();
+    // while (results.hasNext()) {
+    // QuerySolution soln = results.nextSolution();
+    // Literal name = soln.getLiteral("subject");
+    // System.out.println(name);
+    // }
+    // } finally {
+    // qexec.close();
+    // }
+
+    // return "Query done";
+    // }

@@ -14,173 +14,23 @@ import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
 import { render } from 'react-dom';
 import alignElements from 'diagram-js/lib/features/align-elements';
 import { alignProperty } from '@mui/material/styles/cssUtils';
-//import '../deviceTable.css';
-
-// class Portfolio extends React.Component {
-//     constructor(props) {
-//       super(props);
-//       this.state = {value: ''};
-//     const [data, setData] = useState([])
-//     const URL = 'http://localhost:8080/getResults/';
-
-//     useEffect(() => {
-//         fetchData()
-//     }, [])
 
 
-//     axios.get(URL)
-//     .then(response=>{
-//         setData(response);
-//       console.log(response.data);
-//      console.log("asdasdasd1");
+function DeviceTable({head, rows}) {
 
 
-//     })
-//     .catch(error=>{
-//      console.log(error)
-//      console.log("asdasdasd2");
-//     })
-
-
-
-//     // const fetchData = () => {
-//     //     fetch(URL)
-//     //         .then((res) =>
-//     //             res.json())
-
-//     //         .then((response) => {
-//     //             console.log(response);
-//     //             getData(response);
-//     //         })
-
-//     // }
-//     render() {
-
-//     return (
-//         <>
-//             <h1>How to display JSON data to table in React JS</h1>
-//             <tbody>
-//                 <tr>
-
-//                 {data.map((item, i) => (
-//                     <tr key={i}>
-//                         <th>{item.head.vars}</th>
-
-//                     </tr>
-//                 ))}
-//                 </tr>
-//                 {data.map((item, i) => (
-//                     <tr key={i}>
-//                         {/* <td>{item.us}</td>
-//                         <td>{item.id}</td>
-//                         <td>{item.title}</td>
-//                         <td>{item.body}</td> */}
-//                     </tr>
-//                 ))}
-//             </tbody>
-
-//         </>
-//    );
-// }
-// }
-
-// export default DeviceTable;
-
-
-// class DeviceTable extends React.Component {
-//     constructor(props) {
-//       super(props);
-//       this.state = {value: ''};
-//       const [data, setData] = useState([])
-//       const URL = 'http://localhost:8080/getResults/';
-//     }
-
-//     //   useEffect(() => {
-//     //       fetchData()
-//     //   }, [])
-
-
-//       axios.get(URL)
-//       .then(response=>{
-//           setData(response);
-//         console.log(response.data);
-//        console.log("asdasdasd1");
-
-
-//       })
-//       .catch(error=>{
-//        console.log(error)
-//        console.log("asdasdasd2");
-//       });
-
-//     render() {
-//       return (
-
-//         <><h1>How to display JSON data to table in React JS</h1><tbody>
-//               <tr>
-
-//                   {data.map((item, i) => (
-//                       <tr key={i}>
-//                           <th>{item.head.vars}</th>
-
-//                       </tr>
-//                   ))}
-//               </tr>
-//               {data.map((item, i) => (
-//                   <tr key={i}>
-//                       {/* <td>{item.us}</td>
-//             <td>{item.id}</td>
-//             <td>{item.title}</td>
-//             <td>{item.body}</td> */}
-//                   </tr>
-//               ))}
-//           </tbody></>
-
-
-//       );
-//     }
-//   }
-// }
-//   export default DeviceTable;
-
-function DeviceTable() {
-
-    const [data, setData] = useState([])
     const [row, setRow] = useState([])
     const [col, setCol] = useState([])
-    const [mapRow, setMap] = useState([])
-    const [json, setJson] = useState()
+ 
+    useEffect(()=>{
+        setRow(rows)
+        setCol(head)
+    })
 
-    useEffect(() => {
-        axios.get("http://localhost:8080/getResults")
-            .then(res => {
-                //     console.log("Getting data from::", res.data)
-                // console.log("Getting data from::", res.data.head.vars)
-                //  console.log("Getting data from::", res.data.results.bindings)
-                //       console.log("col", res.data.head.vars);
-                //      console.log("row", res.data.results.bindings);
-                //   setCol(res.data.head.vars)
-                setRow(res.data.results.bindings)
+    console.log("ricevuti head  ",col)
+    console.log("ricevuti rows  ",row)
 
-
-                // setMap(res.data.head.vars.map(item => ({
-                //     id: item
-
-                // })))
-
-                // res.data.head.vars.map((item) => setCol(item))
-                // console.log("ced",res.data.results.bindings[0])
-                //  console.log("aaaaaaaa",col)
-                // console.log("bbbbb",row)
-
-
-
-            })
-            .catch(err => console.log(err))
-    }, [])
-
-
-
+   
 
     //   Object.keys(row[0]).forEach((prop)=> console.log(prop));
 
